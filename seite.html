@@ -7,28 +7,44 @@
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
     }
+
+    /* حالت تاریک */
     .dark-mode {
       background-color: #121212;
       color: white;
     }
-    #clock {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      font-size: 18px;
-      font-weight: bold;
-    }
+
+    /* دکمه تغییر حالت */
     #darkBtn {
       position: fixed;
-      top: 10px;
-      left: 10px;
-      padding: 8px 12px;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 15px;
       border: none;
       border-radius: 6px;
       background-color: #333;
       color: white;
       cursor: pointer;
+      z-index: 1000; /* روی همه‌چی بمونه */
+    }
+
+    #darkBtn:hover {
+      background-color: #555;
+    }
+
+    /* نمایش ساعت */
+    #clock {
+      position: fixed;
+      bottom: 60px;
+      right: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      background: rgba(0,0,0,0.1);
+      padding: 4px 8px;
+      border-radius: 6px;
+      z-index: 1000;
     }
   </style>
 </head>
@@ -52,16 +68,18 @@
   </div>
 
   <!-- دکمه تغییر حالت تاریک -->
-  <button id="darkBtn" onclick="toggleDarkMode()">تغییر حالت</button>
+  <button id="darkBtn" onclick="toggleDarkMode()">🌙 حالت تاریک</button>
 
   <!-- نمایش ساعت -->
   <div id="clock"></div>
 
   <script>
+    // تغییر حالت تاریک
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
     }
 
+    // نمایش ساعت
     function updateClock() {
       const now = new Date();
       const time = now.toLocaleTimeString();
@@ -73,6 +91,7 @@
   </script>
 </body>
 </html>
+
 
 
 
