@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    input { display: block; margin: 10px auto; padding: 8px; width: 200px; }
+    button { padding: 8px 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>Login</h2>
+  <input type="text" id="username" placeholder="Benutzername">
+  <input type="password" id="password" placeholder="Passwort">
+  <button onclick="login()">Login</button>
+  <p>Noch kein Konto? <a href="register.html">Registrieren</a></p>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      const savedUser = localStorage.getItem("username");
+      const savedPass = localStorage.getItem("password");
+
+      if(user === savedUser && pass === savedPass){
+        alert("Login erfolgreich!");
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Falscher Benutzername oder Passwort!");
+      }
+    }
+  </script>
+</body>
+</html>
