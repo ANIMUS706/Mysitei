@@ -1,68 +1,78 @@
 <!DOCTYPE html>
-
-<html lang="Deutsch" dir="ltr">
+<html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    
-    <title>Meine Seite</title>
-    <meta name="description" content=Vorstellung von Jawad>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Site</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+    #clock {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    #darkBtn {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
+<body>
+  <h1 style="font-size: 32px; color:#333;">خوش اومدی</h1>
+  <p style="font-size: 20px;">stelle mich vor</p>
+  <p style="background-color: yellow; padding: 5px;">متن تست زرد</p>
+  <p style="background-color: blue; padding: 5px; color: white;">متن تست آبی</p>
+  <p style="background-color: coral; padding: 5px;">متن تست نارنجی</p>
+  <p style="background-color: darkkhaki; padding: 5px;">متن تست خاکی</p>
 
-<body style="font-family: Arial, Helvetica, sans-serif;line-height: 1.8;margin: 40px;">
-<h1 style="font-size: 32px; color:#333;">Meine seite</h1>
-<p><i style="font-size: 20px;"stelle mich vor></i></p>
-<p style="background-color: yellow;padding: 4px;">Ich heiße <mark>Jawad</mark></p >
-<p style="background-color: blue ;padding: 4px;">Ich komme aus Iran</p>
-<P style="background-color: coral;padding: 4px;">Ich wohne in  Teheran</P>
- <p style="background-color: darkkhaki;padding: 4px;">Ich spreche Persisch und ein bisschen Deutsch</p>
-<hr style="margin: 20px 0;">
-<div style="text-align: center;">
-<H1 style="color: #444; text-align: center;">BERLIN</H1>
-<img src="https://i.postimg.cc/RFdTRYmp/images-9.jpg" alt="Brandenburger Tor - Berlin" style="max-width:100%; height: auto; margin: bottom 20px;;">
-<br>
-<a href="https://openai.com" target="_blank" style="color: brown;font-weight: bold;text-align: center;">
-    chatgpt
-</a>
-<br>
-<a href="Mailto:mhmdjwadmyrglw@gmail.com" target="_blank" style="color: blue;font-weight: bold;text-align: center;">
-    mhmdjwadmyrglw@gmail.com
-</a>
-<br>
-<a href="tel:+989221560848" target="_blank" style="color: #333; font-weight: bold;text-align: center;">
-    +989221560848 
-</div>
-<!-- دکمه تغییر حالت تاریک -->
-<button onclick="toggleDarkMode()" 
-        style="position: fixed; bottom: 20px; right: 20px; 
-               padding: 10px 15px; border-radius: 8px; 
-               background-color: #444; color: white; border: none;">
-  🌙 حالت تاریک
-</button>
+  <div style="text-align: center; margin-top: 20px;">
+    <h2 style="color: #444;">لینک‌ها</h2>
+    <img src="https://i.postimg.cc/RFdTRYmp/photo.jpg" alt="عکس تست">
+    <br><br>
+    <a href="https://openai.com" target="_blank">chatgpt</a>
+    <br><br>
+    <a href="mailto:mhmdjwadmyrglw@gmail.com">mhmdjwadmyrglw@gmail.com</a>
+    <br><br>
+    <a href="tel:+989221560848" target="_blank">+989221560848</a>
+  </div>
 
-<!-- نمایش ساعت -->
-<div id="clock" style="position: fixed; top: 50px; right: 10px; font-weight: bold;"></div>
+  <!-- دکمه تغییر حالت تاریک -->
+  <button id="darkBtn" onclick="toggleDarkMode()">تغییر حالت</button>
 
-<script>
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
-}
+  <!-- نمایش ساعت -->
+  <div id="clock"></div>
 
-function updateClock() {
-  const now = new Date();
-  const time = now.toLocaleTimeString();
-  document.getElementById("clock").textContent = time;
-}
-setInterval(updateClock, 1000);
-updateClock();
-</script>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
 
-<style>
-.dark-mode {
-  background-color: #121212;
-  color: white;
-}
-</style>
+    function updateClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString();
+      document.getElementById("clock").textContent = time;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 </body>
 </html>
+
 
 
