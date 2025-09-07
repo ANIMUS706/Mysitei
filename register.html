@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    input { display: block; margin: 10px auto; padding: 8px; width: 200px; }
+    button { padding: 8px 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>Registrieren</h2>
+  <input type="text" id="username" placeholder="Benutzername">
+  <input type="password" id="password" placeholder="Passwort">
+  <button onclick="register()">Registrieren</button>
+  <p>Schon registriert? <a href="login.html">Login</a></p>
+
+  <script>
+    function register() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if(user && pass){
+        localStorage.setItem("username", user);
+        localStorage.setItem("password", pass);
+        alert("Registrierung erfolgreich!");
+        window.location.href = "login.html";
+      } else {
+        alert("Bitte fülle alle Felder aus!");
+      }
+    }
+  </script>
+</body>
+</html>
