@@ -152,9 +152,37 @@
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
+    .bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* میذاره پشت متن */
+    }
+    .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* نیمه‌تاریک */
+  z-index: 0; /* پشت متن ولی جلوتر از ویدئو */
+   animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+      } 
   </style>
 </head>
 <body>
+  <video autoplay muted loop playsinline class="bg-video">
+  <source src="video.mp4" type="video/mp4">
+  </video>
+<div class="overlay"></div>
   <header>
     <h1>Hallo! Ich bin Javad 👋</h1>
     <p>16 Jahre alt | Webentwickler Anfänger | Persisch, Englisch, Deutsch</p>
@@ -167,11 +195,6 @@
       <p>✅ Python (Grundlagen & Hacking Basics)</p>
       <p>✅ Deutsch (ein bisschen 😅)</p>
       <div class="card-container">
-  <!-- ویدئو بک‌گراند -->
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="video.mp4" type="video/mp4">
-  </video>
-
   <!-- کارت جلو -->
   <div class="glass-card">
     <h2>📂 Projekte</h2>
@@ -187,6 +210,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
