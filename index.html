@@ -3,16 +3,36 @@
 <head>
   <style>
     .glass-box {
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      padding: 20px;
-      border-radius: 15px;
-      color: white;
-      text-shadow: 1px 1px 3px black;
-      max-width: 600px;
-      margin: auto;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+.glass-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 153, 255, 0.7),  /* آبی پررنگ */
+              0 0 50px rgba(0, 153, 255, 0.5); /* Glow نرم‌تر */
+  background: rgba(255, 255, 255, 0.25);
+}
     }
+    .glass-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+    }
+.glass-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 153, 255, 0.7),  /* آبی پررنگ */
+              0 0 50px rgba(0, 153, 255, 0.5); /* Glow نرم‌تر */
+  background: rgba(255, 255, 
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -111,6 +131,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
