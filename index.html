@@ -1,231 +1,113 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="fa">
 <head>
-  <style>
-      .glass-box {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 153, 255, 0.3);
-  color: white;
-  margin: 20px 0;
-  transition: all 0.3s ease-in-out;
-  
-  /* شروع انیمیشن */
-  opacity: 0;
-  transform: scale(0.8) rotateX(20deg);
-  animation: cyberEnter 1s ease forwards;
-}
-
-@keyframes cyberEnter {
-  0% {
-    opacity: 0;
-    transform: scale(0.8) rotateX(20deg);
-    box-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
-  }
-  50% {
-    opacity: 0.7;
-    transform: scale(1.05) rotateX(0deg);
-    box-shadow: 
-      0 0 15px rgba(0, 255, 255, 0.6),
-      0 0 30px rgba(0, 153, 255, 0.4);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) rotateX(0deg);
-    box-shadow: 
-      0 0 20px rgba(0, 255, 255, 0.8),
-      0 0 40px rgba(0, 153, 255, 0.6),
-      0 0 60px rgba(0, 255, 255, 0.4)
-}
-}
-.glass-box:hover{
-    transform: scale(1.08);
-  box-shadow: 
-    0 0 25px rgba(0, 255, 255, 0.9),
-    0 0 50px rgba(0, 153, 255, 0.7),
-    0 0 80px rgba(0, 255, 255, 0.5);
-  background: rgba(0, 255, 255, 0.1);
-  transition: all 0.3s ease-in-out;
- }
-    /* افکت نور نئونی پالس */
-@keyframes neonPulse {
-  0%, 100% {
-    box-shadow: 
-      0 0 20px rgba(0, 255, 255, 0.8),
-      0 0 40px rgba(0, 153, 255, 0.6),
-      0 0 60px rgba(0, 255, 255, 0.4);
-  }
-  50% {
-    box-shadow: 
-      0 0 30px rgba(0, 255, 255, 1),
-      0 0 60px rgba(0, 153, 255, 0.8),
-      0 0 90px rgba(0, 255, 255, 0.6);
-  }
-}
-/* افکت لرزش خفیف sci-fi */
-@keyframes subtleShake {
-  0%, 100% { transform: translate(0, 0) rotateX(0deg); }
-  25% { transform: translate(1px, -1px) rotateX(1deg); }
-  50% { transform: translate(-1px, 1px) rotateX(-1deg); }
-  75% { transform: translate(1px, 1px) rotateX(0.5deg); }
-}
-
-.glass-box {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 153, 255, 0.4);
-  color: white;
-  margin: 20px 0;
-  transition: all 0.3s ease-in-out;
-
-  /* اجرای همزمان سه انیمیشن */
-  animation: cyberEnter 1s ease forwards, 
-             neonPulse 2s infinite alternate,
-             subtleShake 6s infinite;
-}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mein Portfolio - Javad</title>
+  <title>نمونه کارهای من</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background: #2c3e50;
+      font-family: sans-serif;
+      background: url("jio.jpeg") no-repeat center center/cover; /* عکس بک‌گراند */
       color: white;
-      padding: 20px;
-      text-align: center;
+      line-height: 1.6;
     }
-    section {
-      padding: 50px 20px;
-      max-width: 800px;
-      margin: auto;
+
+    /* ویدئو پس‌زمینه */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      z-index: -1;
     }
-    h2 {
-      color: #2c3e50;
-      border-bottom: 2px solid #2c3e50;
-      padding-bottom: 5px;
+
+    #bg-video.show {
+      opacity: 1;
     }
+
+    header, section, footer {
+      background: rgba(0,0,0,0.6);
+      margin: 2rem;
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+
+    h1, h2, p, a {
+      margin: 0.5rem 0;
+    }
+
+    a {
+      color: #cfcfff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     .card {
-      background: white;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
     }
-    footer {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-    }
-    body {
-  background-image: url("Jio.jpeg");
-  background-size: cover;      /* عکس کل صفحه رو پر کنه */
-  background-position: center; /* وسط چین باشه */
-  background-attachment: fixed; /* وقتی اسکرول می‌کنی ثابت بمونه */
-    }
-  @keyframes rainbow {
-  0% { box-shadow: 0 0 20px red; }
-  14% { box-shadow: 0 0 20px orange; }
-  28% { box-shadow: 0 0 20px yellow; }
-  42% { box-shadow: 0 0 20px lime; }
-  57% { box-shadow: 0 0 20px cyan; }
-  71% { box-shadow: 0 0 20px blue; }
-  85% { box-shadow: 0 0 20px violet; }
-  100% { box-shadow: 0 0 20px red; }
-}
-
-.card:hover{
-  animation: rainbow 2s infinite;
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-    .bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2; /* حتی پایین‌تر */
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6); /* بک‌گراند نیمه شفاف */
-  z-index: -1;
-}
-
-header, section, footer, .card {
-  position: relative;
-  z-index: 1; /* متن‌ها همیشه جلوتر */
-}
-    .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.65);/*کمی تیره‌تر برای خوانایی متن */
- }
-  z-index: 0; /* پشت متن ولی جلوتر از ویدئو */
-   animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-      } 
   </style>
 </head>
 <body>
-  <video autoplay muted loop playsinline class="bg-video">
-  <source src="video.mp4" type="video/mp4">
+  <!-- ویدئو -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="video.mp4" type="video/mp4">
   </video>
-<div class="overlay"></div>
+
+  <!-- محتوای سایت -->
   <header>
-    <h1>Hallo! Ich bin Javad 👋</h1>
-    <p>16 Jahre alt | Webentwickler Anfänger | Persisch, Englisch, Deutsch</p>
+    <h1>سلام! من جواد هستم 👋</h1>
+    <p>۱۶ ساله | توسعه‌دهنده وب مبتدی | فارسی، انگلیسی، آلمانی</p>
   </header>
 
+  <section id="skills">
+    <h2>💻 مهارت‌های من</h2>
+    <div class="card">😁 HTML</div>
+    <div class="card">✔️ CSS</div>
+    <div class="card">✔️✔️ JavaScript</div>
+  </section>
+
   <section>
-    <h2>💻 Meine Fähigkeiten</h2>
-    <div class="glass-box card">
-      <p>✅ HTML, CSS, JavaScript</p>
-      <p>✅ Python (Grundlagen & Hacking Basics)</p>
-      <p>✅ Deutsch (ein bisschen 😅)</p>
-      <div class="card-container">
-  <!-- کارت جلو -->
-  <div class="glass-card">
-    <h2>📂 Projekte</h2>
-    <div class="card">
-      <p>🔗 <a href="https://animus706.github.io/Mysitei/" target="_blank">Login-Demo</a></p>
-      <p>🔗 <a href="#">Projekt 2 (bald)</a></p>
-    </div>
-  </div>
+    <h2>📂 پروژه‌ها</h2>
+    <a href="#">🔗 نسخه آزمایشی ورود</a><br>
+    <a href="#">🔗 پروژه ۲ (به زودی)</a>
   </section>
 
   <footer>
-    <p>© 2025 Javad - Mein Portfolio</p>
+    <p>© ۲۰۲۵ جواد - نمونه کارهای من</p>
   </footer>
+
+  <!-- جاوااسکریپت -->
+  <script>
+    const video = document.getElementById('bg-video');
+    const skills = document.getElementById('skills');
+
+    // چک کنیم مهارت‌ها تو دید کاربر هست یا نه
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          video.classList.add('show');  // نمایش ویدئو
+        } else {
+          video.classList.remove('show'); // مخفی بشه
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(skills);
+  </script>
 </body>
 </html>
+
 
 
 
