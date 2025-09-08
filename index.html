@@ -6,29 +6,30 @@
   <title>نمونه کارهای من</title>
   <style>
     body {
-      margin: 0;
-      font-family: sans-serif;
-      background: url("jio.jpeg") no-repeat center center/cover; /* عکس بک‌گراند */
-      color: white;
-      line-height: 1.6;
-    }
+  margin: 0;
+  font-family: sans-serif;
+  background: url("jio.jpeg") no-repeat center center fixed;
+  background-size: cover; /* خیلی مهم */
+  color: white;
+  line-height: 1.6;
+}
 
-    /* ویدئو پس‌زمینه */
-    #bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-      z-index: -1;
-    }
+/* ویدئو پس‌زمینه */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0; /* پیش‌فرض پنهانه */
+  transition: opacity 1s ease-in-out;
+  z-index: -1; /* پشت محتوا */
+}
 
-    #bg-video.show {
-      opacity: 1;
-    }
+#bg-video.show {
+  opacity: 1; /* وقتی فعال بشه ویدئو ظاهر میشه */
+}
 
     header, section, footer {
       background: rgba(0,0,0,0.6);
@@ -107,6 +108,7 @@
   </script>
 </body>
 </html>
+
 
 
 
