@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <style>
+    .glass-box {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 20px;
+      border-radius: 15px;
+      color: white;
+      text-shadow: 1px 1px 3px black;
+      max-width: 600px;
+      margin: auto;
+    }
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mein Portfolio - Javad</title>
@@ -48,6 +61,22 @@
   background-position: center; /* وسط چین باشه */
   background-attachment: fixed; /* وقتی اسکرول می‌کنی ثابت بمونه */
     }
+  @keyframes rainbow {
+  0% { box-shadow: 0 0 20px red; }
+  14% { box-shadow: 0 0 20px orange; }
+  28% { box-shadow: 0 0 20px yellow; }
+  42% { box-shadow: 0 0 20px lime; }
+  57% { box-shadow: 0 0 20px cyan; }
+  71% { box-shadow: 0 0 20px blue; }
+  85% { box-shadow: 0 0 20px violet; }
+  100% { box-shadow: 0 0 20px red; }
+}
+
+.card:hover{
+  animation: rainbow 2s infinite;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
   </style>
 </head>
 <body>
@@ -58,11 +87,11 @@
 
   <section>
     <h2>💻 Meine Fähigkeiten</h2>
-    <div class="card">
+    <div class="glass-box card">
       <p>✅ HTML, CSS, JavaScript</p>
       <p>✅ Python (Grundlagen & Hacking Basics)</p>
       <p>✅ Deutsch (ein bisschen 😅)</p>
-    </div>
+    </div">
 
     <h2>📂 Projekte</h2>
     <div class="card">
@@ -82,6 +111,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
