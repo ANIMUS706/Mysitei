@@ -2,38 +2,93 @@
 <html lang="de">
 <head>
   <style>
-    .glass-box {
-  background: rgba(255, 255, 255, 0.15);
+      .glass-box {
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 20px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
+  border: 1px solid rgba(0, 153, 255, 0.3);
   color: white;
-  transition: all 0.4s ease-in-out;
-}
-
-.glass-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 153, 255, 0.7),  /* آبی پررنگ */
-              0 0 50px rgba(0, 153, 255, 0.5); /* Glow نرم‌تر */
-  background: rgba(255, 255, 255, 0.25);
-}
-    }
-    .glass-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
-  background: rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
   transition: all 0.3s ease-in-out;
-    }
-.glass-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 153, 255, 0.7),  /* آبی پررنگ */
-              0 0 50px rgba(0, 153, 255, 0.5); /* Glow نرم‌تر */
-  background: rgba(255, 255, 
+  
+  /* شروع انیمیشن */
+  opacity: 0;
+  transform: scale(0.8) rotateX(20deg);
+  animation: cyberEnter 1s ease forwards;
+}
 
+@keyframes cyberEnter {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotateX(20deg);
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05) rotateX(0deg);
+    box-shadow: 
+      0 0 15px rgba(0, 255, 255, 0.6),
+      0 0 30px rgba(0, 153, 255, 0.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+    box-shadow: 
+      0 0 20px rgba(0, 255, 255, 0.8),
+      0 0 40px rgba(0, 153, 255, 0.6),
+      0 0 60px rgba(0, 255, 255, 0.4)
+}
+}
+.glass-box:hover{
+    transform: scale(1.08);
+  box-shadow: 
+    0 0 25px rgba(0, 255, 255, 0.9),
+    0 0 50px rgba(0, 153, 255, 0.7),
+    0 0 80px rgba(0, 255, 255, 0.5);
+  background: rgba(0, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+ }
+    /* افکت نور نئونی پالس */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(0, 255, 255, 0.8),
+      0 0 40px rgba(0, 153, 255, 0.6),
+      0 0 60px rgba(0, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(0, 255, 255, 1),
+      0 0 60px rgba(0, 153, 255, 0.8),
+      0 0 90px rgba(0, 255, 255, 0.6);
+  }
+}
+/* افکت لرزش خفیف sci-fi */
+@keyframes subtleShake {
+  0%, 100% { transform: translate(0, 0) rotateX(0deg); }
+  25% { transform: translate(1px, -1px) rotateX(1deg); }
+  50% { transform: translate(-1px, 1px) rotateX(-1deg); }
+  75% { transform: translate(1px, 1px) rotateX(0.5deg); }
+}
+
+.glass-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 153, 255, 0.4);
+  color: white;
+  margin: 20px 0;
+  transition: all 0.3s ease-in-out;
+
+  /* اجرای همزمان سه انیمیشن */
+  animation: cyberEnter 1s ease forwards, 
+             neonPulse 2s infinite alternate,
+             subtleShake 6s infinite;
+}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mein Portfolio - Javad</title>
@@ -131,6 +186,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
