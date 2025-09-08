@@ -159,7 +159,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1; /* میذاره پشت متن */
+  z-index: -1; /* ویدئو میره پشت همه*/
+    }
+    header, section, footer, .card {
+  position: relative;
+  z-index: 1; /* متن‌ها و کارت‌ها بالاتر می‌مونن */
     }
     .overlay {
   position: fixed;
@@ -211,6 +215,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
