@@ -58,9 +58,212 @@
       cursor: pointer;
       z-index: 2;
     }
+    /* ===== About Section ===== */
+:root{
+  --card-bg: rgba(0,0,0,.55);
+  --card-border: rgba(255,255,255,.08);
+}
+.section{
+  position: relative;           /* بالاتر از لایه تاریک */
+  z-index: 1;
+  width: min(960px, 92%);
+  margin: 2rem auto;
+  padding: 1.25rem 1.25rem 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  line-height: 1.9;
+  color: #fff;
+}
+.section h2{
+  margin: 0 0 .75rem;
+  font-size: clamp(1.2rem, 2vw + 1rem, 2rem);
+}
+.about-row{
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+.avatar{
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,.25);
+}
+.avatar img{ width:100%; height:100%; object-fit: cover; }
+.badges{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.75rem; }
+.badge{
+  padding:.35rem .6rem;
+  border:1px solid var(--card-border);
+  border-radius:999px;
+  font-size:.9rem;
+}
+/* موبایل */
+@media (max-width:640px){
+  .about-row{ grid-template-columns: 1fr; text-align: center; }
+  .avatar{ margin: 0 auto; }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: .5rem;
+  margin-bottom: .75rem;
+}
+
+.project-card h3 {
+  margin: .5rem 0;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: .5rem;
+  padding: .4rem .8rem;
+  background: #007bff;
+  color: white;
+  border-radius: .5rem;
+  text-decoration: none;
+  font-size: .9rem;
+}
+
+.project-card a:hover {
+  background: #0056b3;
+}
+  #contact {
+  text-align: center;
+  padding: 60px 20px;
+  background: #111;
+  color: #fff;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-links a {
+  margin: 0 15px;
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+form {
+  margin-top: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form textarea {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+form button {
+  padding: 12px;
+  background: #00ffcc;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
   </style>
 </head>
 <body>
+  <section id="contact">
+  <h2>تماس با من</h2>
+  <p>برای همکاری یا پرسش می‌تونی از راه‌های زیر در ارتباط باشی:</p>
+  
+  <div class="contact-links">
+    <a href="mailto:yourmail@example.com">ایمیل</a>
+    <a href="https://github.com/username" target="_blank">گیت‌هاب</a>
+    <a href="https://instagram.com/username" target="_blank">اینستاگرام</a>
+  </div>
+  
+  <!-- فرم تماس (اختیاری) -->
+  <form>
+    <input type="text" placeholder="نام شما" required>
+    <input type="email" placeholder="ایمیل شما" required>
+    <textarea placeholder="پیام شما" required></textarea>
+    <button type="submit">ارسال</button>
+  </form>
+  </section>
+  <section id="projects" class="section">
+  <h2>پروژه‌ها</h2>
+  <div class="projects-grid">
+    
+    <div class="project-card">
+      <img src="project1.jpg" alt="پروژه ۱">
+      <h3>پروژه شماره ۱</h3>
+      <p>توضیح کوتاه درباره پروژه شماره ۱.</p>
+      <a href="#" target="_blank">مشاهده پروژه</a>
+    </div>
+
+    <div class="project-card">
+      <img src="project2.jpg" alt="پروژه ۲">
+      <h3>پروژه شماره ۲</h3>
+      <p>توضیح کوتاه درباره پروژه شماره ۲.</p>
+      <a href="#" target="_blank">مشاهده پروژه</a>
+    </div>
+
+    <div class="project-card">
+      <img src="project3.jpg" alt="پروژه ۳">
+      <h3>پروژه شماره ۳</h3>
+      <p>توضیح کوتاه درباره پروژه شماره ۳.</p>
+      <a href="#" target="_blank">مشاهده پروژه</a>
+    </div>
+
+  </div>
+  </section>
+  <section id="about" class="section">
+  <h2>درباره من</h2>
+  <div class="about-row">
+    <div class="avatar">
+      <!-- اگر عکس نداری فعلاً همین را بگذار؛ بعداً فایل خودت را جایگزین کن -->
+      <img src="profile.jpg" alt="عکس پروفایل جواد" onerror="this.style.display='none'">
+    </div>
+    <div>
+      <p>
+        سلام! من جواد هستم، ۱۶ ساله و توسعه‌دهندهٔ وب مبتدی.
+        به HTML، CSS و JavaScript علاقه‌مندم و هر روز دارم بهتر می‌شم.
+        هدفم ساخت رابط‌های تمیز با افکت‌های جذابه 🌟
+      </p>
+      <div class="badges">
+        <span class="badge">🇮🇷 فارسی</span>
+        <span class="badge">🇬🇧 انگلیسی</span>
+        <span class="badge">🇩🇪 آلمانی</span>
+        <span class="badge">⚡ تازه‌کارِ پرانرژی</span>
+      </div>
+    </div>
+  </div>
+  </section>
 
   <!-- ویدئو پس‌زمینه -->
   <video autoplay muted loop id="bg-video" poster="jio.jpeg">
@@ -94,6 +297,7 @@
   </script>
 </body>
 </html>
+
 
 
 
