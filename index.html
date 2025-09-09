@@ -332,8 +332,8 @@ form button {
   padding: 50px 20px; /* فاصله کافی از لبه‌ها */ 
 }
 .section.show {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; important!
+  transform: none(0); important!
   position: relative;
   z-index: 1; /* همه سکشن‌ها بالای ویدئو */
   color: #fff; /* سفید برای دیده شدن */
@@ -553,6 +553,7 @@ window.addEventListener('scroll', () => {
   </script>
 </body>
 </html>
+
 
 
 
