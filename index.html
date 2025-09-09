@@ -38,21 +38,21 @@
   border-radius: 20px;
   overflow: hidden;
   height: 12px;
+  margin-bottom: 15px;
 }
 
 .progress span {
   display: block;
   height: 100%;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  background: linear-gradient(90deg, #0066ff, #0072ff);
   border-radius: 20px;
+  width: 0; /* اول خالی */
+  animation: fillProgress 2s ease-out forwards;
 }
-    @keyframes fillProgress {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--progress-width);
-  }
+
+@keyframes fillProgress {
+  from { width: 0; }
+  to { width: var(--progress-width); }
 }
 
 .progress span {
@@ -427,6 +427,7 @@ form button {
   </script>
 </body>
 </html>
+
 
 
 
