@@ -13,13 +13,24 @@
 .skill {
   margin-bottom: 20px;
 }
+    .skill {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
 
 .skill p {
+  display: flex;
+  justify-content: space-between; /* متن سمت چپ - درصد سمت راست */
   margin: 0 0 8px;
   font-weight: bold;
   color: #fff;
 }
 
+.percent {
+  color: #66aaff;
+  font-weight: normal;
+}
 .progress {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
@@ -418,6 +429,7 @@ form button {
   </script>
 </body>
 </html>
+
 
 
 
