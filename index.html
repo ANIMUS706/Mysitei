@@ -317,6 +317,15 @@ form button {
   cursor: pointer;
   font-weight: bold;
 }
+  .section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
   </style>
 </head>
 <body>
@@ -424,9 +433,20 @@ form button {
         btn.textContent = "🔇";
       }
     });
+    // اسکرول انیمیشن
+const sections = document.querySelectorAll('.section');
+window.addEventListener('scroll', () => {
+  sections.forEach(sec => {
+    const rect = sec.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      sec.classList.add('show');
+    }
+  });
+});
   </script>
 </body>
 </html>
+
 
 
 
