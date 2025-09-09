@@ -198,18 +198,14 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   line-height: 1.9;
-  * {
-  color: #fff !important;
-} /* سفید برای دیده شدن */
+  color: #fff /* سفید برای دیده شدن */
 }
 .section h2{
   margin: 0 0 .75rem;
   font-size: clamp(1.2rem, 2vw + 1rem, 2rem);
   position: relative;
   z-index: 1; /* همه سکشن‌ها بالای ویدئو */
-  * {
-  color: #fff !important;
-} /* سفید برای دیده شدن */
+  color: #fff /* سفید برای دیده شدن */
   padding: 50px 20px; /* فاصله کافی از لبه‌ها */
 }
 .about-row{
@@ -327,24 +323,21 @@ form button {
   font-weight: bold;
 }
   .section {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(40px);
   transition: all 0.8s ease-out;
   position: relative;
   z-index: 1; /* همه سکشن‌ها بالای ویدئو */
-  * {
-  color: #fff !important;
-} /* سفید برای دیده شدن */
+  color: #fff /* سفید برای دیده شدن */
   padding: 50px 20px; /* فاصله کافی از لبه‌ها */ 
 }
 .section.show {
-  opacity: 1; important!
-  transform: none(0); important!
+  opacity: 1;
+  transform: translateY(50px);
   position: relative;
   z-index: 1; /* همه سکشن‌ها بالای ویدئو */
   * {
-  color: #fff !important;
-}/* سفید برای دیده شدن */
+  color: #fff /* سفید برای دیده شدن */
   padding: 50px 20px; /* فاصله کافی از لبه‌ها */
 }
  /* استایل کلی فرم */
@@ -561,6 +554,7 @@ window.addEventListener('scroll', () => {
   </script>
 </body>
 </html>
+
 
 
 
