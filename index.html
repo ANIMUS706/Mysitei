@@ -542,35 +542,26 @@ window.addEventListener('scroll', () => {
         alert("خطا در ارسال ❌", error);
       });
   });
-<!-- دکمه برای پخش/توقف -->
-<button id="music-btn">🎵 Play Music</button>
-
-<!-- موزیک -->
 <audio id="bg-music" loop>
   <source src="https://raw.githubusercontent.com/animus706/animus706.github.io/main/ss.mp3" type="audio/mpeg">
 </audio>
 
-<!-- اسکریپت -->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const musicBtn = document.getElementById("music-btn");
-    const bgMusic = document.getElementById("bg-music");
-    let isPlaying = false;
+  const bgMusic = document.getElementById("bg-music");
 
-    musicBtn.addEventListener("click", () => {
-      if (isPlaying) {
-        bgMusic.pause();
-        musicBtn.textContent = "🎵 Play Music";
-      } else {
-        bgMusic.play();
-        musicBtn.textContent = "⏸ Pause Music";
-      }
-      isPlaying = !isPlaying;
-    });
-  });
+  function playMusicOnce() {
+    bgMusic.play().catch(err => console.log("پخش نشد:", err));
+    document.removeEventListener("click", playMusicOnce);
+    document.removeEventListener("scroll", playMusicOnce);
+  }
+
+  // وقتی کاربر اولین بار کلیک یا اسکرول کنه → موزیک شروع میشه
+  document.addEventListener("click", playMusicOnce);
+  document.addEventListener("scroll", playMusicOnce);
 </script>
 </body>
 </html>
+
 
 
 
