@@ -190,21 +190,6 @@
       font-size: 18px;
       line-height: 1.8;
     }
-
-    /* دکمه صدا */
-    #mute-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: rgba(0,0,0,0.6);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      padding: 12px;
-      font-size: 20px;
-      cursor: pointer;
-      z-index: 2;
-    }
     /* ===== About Section ===== */
 :root{
   --card-bg: rgba(0,0,0,.55);
@@ -528,23 +513,6 @@ form button:hover {
     <p>💻 اینجا پروژه‌هامو میذارم</p>
     <p>😊 امیدوارم خوشت بیاد</p>
   </div>
-
-  <!-- دکمه صدا -->
-  <button id="mute-btn">🔇</button>
-
-  <script>
-    const video = document.getElementById("bg-video");
-    const btn = document.getElementById("mute-btn");
-
-    btn.addEventListener("click", () => {
-      if (video.muted) {
-        video.muted = false;
-        btn.textContent = "🔊";
-      } else {
-        video.muted = true;
-        btn.textContent = "🔇";
-      }
-    });
     // اسکرول انیمیشن
 const sections = document.querySelectorAll('.section');
 window.addEventListener('scroll', () => {
@@ -598,6 +566,7 @@ window.addEventListener('scroll', () => {
   </script>
 </body>
 </html>
+
 
 
 
