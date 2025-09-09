@@ -188,21 +188,25 @@
 }
 .section{
   position: relative;           /* بالاتر از لایه تاریک */
-  z-index: 1;
+  z-index: 1; /* همه سکشن‌ها بالای ویدئو */
   width: min(960px, 92%);
   margin: 2rem auto;
-  padding: 1.25rem 1.25rem 1.5rem;
+ padding: 50px 20px; /* فاصله کافی از لبه‌ها */ 
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 16px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   line-height: 1.9;
-  color: #fff;
+  color: #fff; /* سفید برای دیده شدن */
 }
 .section h2{
   margin: 0 0 .75rem;
   font-size: clamp(1.2rem, 2vw + 1rem, 2rem);
+  position: relative;
+  z-index: 1; /* همه سکشن‌ها بالای ویدئو */
+  color: #fff; /* سفید برای دیده شدن */
+  padding: 50px 20px; /* فاصله کافی از لبه‌ها */
 }
 .about-row{
   display: grid;
@@ -322,10 +326,18 @@ form button {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s ease-out;
+  position: relative;
+  z-index: 1; /* همه سکشن‌ها بالای ویدئو */
+  color: #fff; /* سفید برای دیده شدن */
+  padding: 50px 20px; /* فاصله کافی از لبه‌ها */ 
 }
 .section.show {
   opacity: 1;
   transform: translateY(0);
+  position: relative;
+  z-index: 1; /* همه سکشن‌ها بالای ویدئو */
+  color: #fff; /* سفید برای دیده شدن */
+  padding: 50px 20px; /* فاصله کافی از لبه‌ها */
 }
  /* استایل کلی فرم */
 form {
@@ -541,6 +553,7 @@ window.addEventListener('scroll', () => {
   </script>
 </body>
 </html>
+
 
 
 
