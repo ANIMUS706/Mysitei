@@ -341,12 +341,12 @@ form button {
   </div>
   
   <!-- فرم تماس (اختیاری) -->
-  <form>
-    <input type="text" placeholder="نام شما" required>
-    <input type="email" placeholder="ایمیل شما" required>
-    <textarea placeholder="پیام شما" required></textarea>
-    <button type="submit">ارسال</button>
-  </form>
+  <form id="contact-form">
+  <input type="text" name="name" placeholder="نام شما" required>
+  <input type="email" name="email" placeholder="ایمیل شما" required>
+  <textarea name="message" placeholder="پیام شما" required></textarea>
+  <button type="submit">ارسال</button>
+</form>
   </section>
   <section id="projects" class="section">
   <h2>پروژه‌ها</h2>
@@ -465,6 +465,7 @@ window.addEventListener('scroll', () => {
   </script>
 </body>
 </html>
+
 
 
 
