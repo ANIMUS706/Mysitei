@@ -542,6 +542,15 @@ window.addEventListener('scroll', () => {
         alert("خطا در ارسال ❌", error);
       });
   });
+<!-- دکمه برای پخش/توقف -->
+<button id="music-btn">🎵 Play Music</button>
+
+<!-- موزیک -->
+<audio id="bg-music" loop>
+  <source src="https://animus706.github.io/ss.mp3" type="audio/mpeg">
+</audio>
+
+<!-- اسکریپت -->
 <script>
   const musicBtn = document.getElementById("music-btn");
   const bgMusic = document.getElementById("bg-music");
@@ -558,16 +567,9 @@ window.addEventListener('scroll', () => {
     isPlaying = !isPlaying;
   });
 </script>
-  <!-- دکمه‌ی گیمینگ برای پخش/توقف -->
-<button id="music-btn">🎵 Play Music</button>
-
-<!-- پخش موسیقی در بک‌گراند -->
-      <audio id="bg-music" loop>
-  <source src="https://animus706.github.io/ss.mp3" type="audio/mpeg">
-    </audio>
-  </script>
 </body>
 </html>
+
 
 
 
