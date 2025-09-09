@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>نمونه کارهای من</title>
   <style>
+    .slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 15px;
+}
+.slide {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
     /* بخش مهارت‌ها */
 #skills {
   margin-top: 40px;
@@ -323,31 +340,12 @@ form button {
   </section>
   <section id="projects" class="section">
   <h2>پروژه‌ها</h2>
-  <div class="projects-grid">
-    
-    <div class="project-card">
-      <img src="images/project1-screenshot.jpg" alt="اسکرین‌شات پروژه شماره 1">
-      <h3>پروژه شماره ۱</h3>
-      <p>توضیح کوتاه درباره پروژه شماره ۱.</p>
-      <a href="#" target="_blank">مشاهده پروژه</a>
-    </div>
-
-    <div class="project-card">
-      <img src="images/project2-screenshot.jpg" alt="2 اسکرین‌شات پروژه شماره">
-      <h3>پروژه شماره ۲</h3>
-      <p>توضیح کوتاه درباره پروژه شماره ۲.</p>
-      <a href="#" target="_blank">مشاهده پروژه</a>
-    </div>
-
-    <div class="project-card">
-      <img src="images/project3-screenshot.jpg" alt="3 اسکرین‌شات پروژه شماره">
-      <h3>پروژه شماره ۳</h3>
-      <p>توضیح کوتاه درباره پروژه شماره ۳.</p>
-      <a href="#" target="_blank">مشاهده پروژه</a>
-    </div>
-
+  <div class="slider">
+    <div class="slide"><img src="project1-screenshot.jpg" alt="پروژه ۱"></div>
+    <div class="slide"><img src="project2-screenshot.jpg" alt="پروژه ۲"></div>
+    <div class="slide"><img src="project3-screenshot.jpg" alt="پروژه ۳"></div>
   </div>
-  </section>
+</section>
   <section id="about" class="section">
   <h2>درباره من</h2>
 
@@ -429,6 +427,7 @@ form button {
   </script>
 </body>
 </html>
+
 
 
 
