@@ -547,28 +547,31 @@ window.addEventListener('scroll', () => {
 
 <!-- موزیک -->
 <audio id="bg-music" loop>
-  <source src="https://animus706.github.io/ss.mp3" type="audio/mpeg">
+  <source src="https://raw.githubusercontent.com/animus706/animus706.github.io/main/ss.mp3" type="audio/mpeg">
 </audio>
 
 <!-- اسکریپت -->
 <script>
-  const musicBtn = document.getElementById("music-btn");
-  const bgMusic = document.getElementById("bg-music");
-  let isPlaying = false;
+  document.addEventListener("DOMContentLoaded", () => {
+    const musicBtn = document.getElementById("music-btn");
+    const bgMusic = document.getElementById("bg-music");
+    let isPlaying = false;
 
-  musicBtn.addEventListener("click", () => {
-    if (isPlaying) {
-      bgMusic.pause();
-      musicBtn.textContent = "🎵 Play Music";
-    } else {
-      bgMusic.play();
-      musicBtn.textContent = "⏸ Pause Music";
-    }
-    isPlaying = !isPlaying;
+    musicBtn.addEventListener("click", () => {
+      if (isPlaying) {
+        bgMusic.pause();
+        musicBtn.textContent = "🎵 Play Music";
+      } else {
+        bgMusic.play();
+        musicBtn.textContent = "⏸ Pause Music";
+      }
+      isPlaying = !isPlaying;
+    });
   });
 </script>
 </body>
 </html>
+
 
 
 
