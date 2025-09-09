@@ -542,13 +542,7 @@ window.addEventListener('scroll', () => {
         alert("خطا در ارسال ❌", error);
       });
   });
-  <button id="music-btn">🎶 Play Music</button>
-
-<audio id= "bg-music" loop>
-  <source src="ss.mp3" type="audio/mpeg">
-  مرورگر شما از پخش موسیقی پشتیبانی نمی‌کند.
-</audio>
-  <script>
+<script>
   const musicBtn = document.getElementById("music-btn");
   const bgMusic = document.getElementById("bg-music");
   let isPlaying = false;
@@ -556,16 +550,26 @@ window.addEventListener('scroll', () => {
   musicBtn.addEventListener("click", () => {
     if (isPlaying) {
       bgMusic.pause();
-      musicBtn.textContent = "🎶 Play Music";
+      musicBtn.textContent = "🎵 Play Music";
     } else {
       bgMusic.play();
       musicBtn.textContent = "⏸ Pause Music";
     }
     isPlaying = !isPlaying;
   });
+</script>
+  <!-- دکمه‌ی گیمینگ برای پخش/توقف -->
+<button id="music-btn">🎵 Play Music</button>
+
+<!-- پخش موسیقی در بک‌گراند -->
+<audio id="bg-music" loop>
+  <source src="ss.mp3" type="audio/mpeg">
+  مرورگر شما از پخش موسیقی پشتیبانی نمی‌کند.
+</audio>
   </script>
 </body>
 </html>
+
 
 
 
