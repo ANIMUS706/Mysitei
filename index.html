@@ -5,6 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>نمونه کارهای من</title>
   <style>
+    #music-btn {
+  background: linear-gradient(90deg, #00ffcc, #7700ff, #00ffcc);
+  background-size: 300%;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 25px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00ffcc, 0 0 25px #7700ff;
+  transition: 0.3s ease;
+  animation: neonMove 5s linear infinite;
+}
+
+#music-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #00ffcc, 0 0 35px #7700ff;
+}
+
+@keyframes neonMove {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
     .slider {
   display: flex;
   overflow-x: auto;
@@ -550,9 +574,31 @@ window.addEventListener('scroll', () => {
         alert("خطا در ارسال ❌", error);
       });
   });
+  <button id="music-btn">🎶 Play Music</button>
+
+<audio id="bg-music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+  مرورگر شما از پخش موسیقی پشتیبانی نمی‌کند.
+</audio>
+  <script>
+  const musicBtn = document.getElementById("music-btn");
+  const bgMusic = document.getElementById("bg-music");
+  let isPlaying = false;
+
+  musicBtn.addEventListener("click", () => {
+    if (isPlaying) {
+      bgMusic.pause();
+      musicBtn.textContent = "🎶 Play Music";
+    } else {
+      bgMusic.play();
+      musicBtn.textContent = "⏸ Pause Music";
+    }
+    isPlaying = !isPlaying;
+  });
   </script>
 </body>
 </html>
+
 
 
 
