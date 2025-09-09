@@ -30,6 +30,22 @@
   display:block;
   filter:saturate(1.1);
 }
+    .avatar img {
+  border: 3px solid #00c3ff;   /* خط دور آبی */
+  border-radius: 50%;          /* گرد کردن کامل */
+  animation: fadeIn 1.2s ease-in-out; /* انیمیشن ظاهر شدن */
+  transition: transform 0.3s ease;    /* برای افکت هاور */
+}
+
+.avatar img:hover {
+  transform: scale(1.1) rotate(3deg); /* وقتی موس روش میره */
+}
+
+/* انیمیشن ظاهر شدن */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
 
 /* ریسپانسیو موبایل */
 @media (max-width:640px){
@@ -233,9 +249,9 @@ form button {
   <p>برای همکاری یا پرسش می‌تونی از راه‌های زیر در ارتباط باشی:</p>
   
   <div class="contact-links">
-    <a href="mailto:yourmail@example.com">ایمیل</a>
-    <a href="https://github.com/username" target="_blank">گیت‌هاب</a>
-    <a href="https://instagram.com/username" target="_blank">اینستاگرام</a>
+    <a href="mailto:mhmdjwadmyrglw@gmail.com">ایمیل</a>
+    <a href="https://github.com/ANIMUS706" target="_blank">گیت‌هاب</a>
+    <a href="https://instagram.com/mhmd.jwadbyat" target="_blank">اینستاگرام</a>
   </div>
   
   <!-- فرم تماس (اختیاری) -->
@@ -251,21 +267,21 @@ form button {
   <div class="projects-grid">
     
     <div class="project-card">
-      <img src="project1.jpg" alt="پروژه ۱">
+      <img src="images/project1-screenshot.jpg" alt="اسکرین‌شات پروژه شماره 1">
       <h3>پروژه شماره ۱</h3>
       <p>توضیح کوتاه درباره پروژه شماره ۱.</p>
       <a href="#" target="_blank">مشاهده پروژه</a>
     </div>
 
     <div class="project-card">
-      <img src="project2.jpg" alt="پروژه ۲">
+      <img src="images/project2-screenshot.jpg" alt="2 اسکرین‌شات پروژه شماره">
       <h3>پروژه شماره ۲</h3>
       <p>توضیح کوتاه درباره پروژه شماره ۲.</p>
       <a href="#" target="_blank">مشاهده پروژه</a>
     </div>
 
     <div class="project-card">
-      <img src="project3.jpg" alt="پروژه ۳">
+      <img src="images/project3-screenshot.jpg" alt="3 اسکرین‌شات پروژه شماره">
       <h3>پروژه شماره ۳</h3>
       <p>توضیح کوتاه درباره پروژه شماره ۳.</p>
       <a href="#" target="_blank">مشاهده پروژه</a>
@@ -280,7 +296,7 @@ form button {
     <div class="avatar">
       <img src="profile.jpg"
      srcset="profile.webp 1x, profile.jpg 1x"
-     alt="عکس جواد"
+     alt="Jio.jpeg"
      width="110" height="110"
      loading="lazy" decoding="async">
     </div>
@@ -333,6 +349,7 @@ form button {
   </script>
 </body>
 </html>
+
 
 
 
