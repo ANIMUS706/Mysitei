@@ -327,6 +327,63 @@ form button {
   opacity: 1;
   transform: translateY(0);
 }
+ /* استایل کلی فرم */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+/* ورودی‌ها */
+form input, 
+form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* دکمه ارسال */
+form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00ffe7, #00bfff);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background: linear-gradient(135deg, #00bfff, #0077ff);
+}
+
+/* مخصوص موبایل */
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  form input, 
+  form textarea {
+    font-size: 15px;
+  }
+
+  form button {
+    font-size: 16px;
+    padding: 12px;
+  }
+} 
   </style>
 </head>
 <body>
@@ -484,6 +541,7 @@ window.addEventListener('scroll', () => {
   </script>
 </body>
 </html>
+
 
 
 
