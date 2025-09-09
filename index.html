@@ -462,9 +462,29 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  (function() {
+    emailjs.init("PUBLIC_KEY"); // اینجا Public Key خودتو بذار
+  })();
+
+  // هندل کردن فرم
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("SERVICE_ID", "TEMPLATE_ID", this)
+      .then(function() {
+        alert("پیام با موفقیت ارسال شد ✅");
+      }, function(error) {
+        alert("خطا در ارسال ❌", error);
+      });
+  });
   </script>
 </body>
 </html>
+
 
 
 
