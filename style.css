@@ -377,12 +377,6 @@ form button:hover {
   flex-direction: column;
 }
 
-.circle-skill svg {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  transform: rotate(-90deg); /* شروع از بالا */
-}
 
 .circle-skill circle {
   fill: none;
@@ -429,7 +423,7 @@ svg defs linearGradient {
 }
 
 .circle-skill svg {
-  transform: rotate(-90deg);
+  transform: rotate(0deg);
   width: 150px;
   height: 150px;
 }
