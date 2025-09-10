@@ -395,12 +395,6 @@ form button:hover {
   opacity: 0.2;
 }
 
-.circle-skill circle:last-child {
-  stroke: url(#rainbowGradient);
-  stroke-dasharray: 440;
-  stroke-dashoffset: calc(440 - (440 * var(--percent)) / 100);
-  animation: rainbowMove 4s linear infinite;
-}
 
 /* متن درصد */
 .circle-skill .percent {
@@ -426,4 +420,45 @@ svg defs linearGradient {
 @keyframes rainbowMove {
   0% { stroke: url(#rainbowGradient); }
   100% { stroke: url(#rainbowGradient); }
+}
+.circle-skill {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+}
+
+.circle-skill svg {
+  transform: rotate(-90deg);
+  width: 150px;
+  height: 150px;
+}
+
+.circle-skill circle {
+  fill: none;
+  stroke-width: 15;
+  cx: 70;
+  cy: 70;
+  r: 70;
+}
+
+.circle-skill circle:nth-child(1) {
+  stroke: #ddd; /* پس‌زمینه خاکستری */
+}
+
+.circle-skill circle:nth-child(2) {
+  stroke: url(#rainbowGradient); /* رنگین‌کمونی */
+  stroke-dasharray: 440; /* محیط دایره */
+  stroke-dashoffset: calc(440 - (440 * var(--percent)) / 100);
+  transition: stroke-dashoffset 1s ease;
+}
+
+.circle-skill .percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
 }
