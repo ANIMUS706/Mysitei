@@ -223,3 +223,9 @@ body.dark-mode .card {
   display: inline-block;
   font-weight: bold;
 }
+/* مخصوص بخش مقالات */
+.articles .card {
+  background: transparent !important; /* بدون پس زمینه */
+  box-shadow: none !important;        /* بدون سایه */
+  border: none !important;            /* بدون کادر */
+}
