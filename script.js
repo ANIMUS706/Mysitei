@@ -20,3 +20,32 @@ window.addEventListener("load", () => {
     toggleButton.textContent = "🌙 Dark Mode";
   }
 });
+  const translations = {
+    fa: {
+      name: "محمد جواد میرگلو",
+      job: "برنامه‌نویس و توسعه‌دهنده وب",
+      about: "درباره من",
+      aboutText: "عاشق برنامه‌نویسی و ساخت پروژه‌های خلاقانه‌ام.",
+      projects: "پروژه‌ها",
+      project1Title: "پروژه HTML و CSS",
+      project1Desc: "یک وبسایت نمونه با HTML و CSS",
+      project1Link: "مشاهده"
+    },
+    en: {
+      name: "Mohammad Javad Mirgloo",
+      job: "Web Developer",
+      about: "About Me",
+      aboutText: "I love programming and building creative projects.",
+      projects: "Projects",
+      project1Title: "HTML & CSS Project",
+      project1Desc: "A sample website built with HTML and CSS",
+      project1Link: "View"
+    }
+  };
+
+  function setLanguage(lang) {
+    document.querySelectorAll("[data-translate]").forEach(el => {
+      const key = el.getAttribute("data-translate");
+      el.innerText = translations[lang][key];
+    });
+  }
