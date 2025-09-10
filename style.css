@@ -496,3 +496,28 @@ body.light-mode .box {
   border-radius: 50%;
   object-fit: cover; /* عکس دقیق تو قاب جا بشه */
 }
+      .skill {
+  width: 120px;
+  height: 120px;
+  border: 2px solid #00ff99; /* رنگ قاب */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden; /* باعث میشه عکس از دایره بیرون نزنه */
+  margin: 10px;
+}
+
+.skill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* عکس توی قاب جا میشه */
+  border-radius: 50%;
+}
+
+.skill p {
+  margin-top: 10px;
+  color: #00ff99;
+  font-weight: bold;
+}
