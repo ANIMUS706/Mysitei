@@ -443,8 +443,9 @@ body.light-mode .box {
   background: #fff !important;
   color: #111 !important;
 }
-body.light-mode h2 {
-  color: #000 !important;
-  font-weight: bold !important;
-  opacity: 1 !important;
-}
+      body.light-mode h2 {
+  color: #000 !important;   /* متن مشکی */
+  font-weight: 900 !important; /* خیلی پررنگ */
+  text-shadow: 0 0 1px rgba(0,0,0,0.5) !important; /* سایه برای واضح‌تر شدن */
+  opacity: 1 !important; /* شفافیت کامل */
+      }
