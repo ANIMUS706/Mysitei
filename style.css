@@ -436,6 +436,12 @@ section, .card, .content, .box {
   color: #fff !important;      /* متن سفید */
   border-radius: 12px;
   padding: 20px;
+body.light-mode section,
+body.light-mode .card,
+body.light-mode .content,
+body.light-mode .box {
+  background: #fff !important;
+  color: #111 !important;
 }
 body.light-mode h2 {
   color: #000 !important;
