@@ -423,7 +423,7 @@ svg defs linearGradient {
 }
 
 .circle-skill svg {
-  transform: rotate(0deg);
+  transform: rotate(-90deg);
   width: 150px;
   height: 150px;
 }
