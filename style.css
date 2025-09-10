@@ -215,5 +215,7 @@ p {
   background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: bold; /* برای شفاف‌تر شدن رنگ‌ها */
+  color: transparent; /* خیلی مهمه */
+  display: inline-block; /* لازم برای درست کار کردن گرادینت */
+  font-weight: bold;
 }
