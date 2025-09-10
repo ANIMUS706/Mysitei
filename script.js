@@ -21,31 +21,32 @@ window.addEventListener("load", () => {
   }
 });
   const translations = {
-    fa: {
-      name: "محمد جواد میرگلو",
-      job: "برنامه‌نویس و توسعه‌دهنده وب",
-      about: "درباره من",
-      aboutText: "عاشق برنامه‌نویسی و ساخت پروژه‌های خلاقانه‌ام.",
-      projects: "پروژه‌ها",
-      project1Title: "پروژه HTML و CSS",
-      project1Desc: "یک وبسایت نمونه با HTML و CSS",
-      project1Link: "مشاهده"
-    },
-    en: {
-      name: "Mohammad Javad Mirgloo",
-      job: "Web Developer",
-      about: "About Me",
-      aboutText: "I love programming and building creative projects.",
-      projects: "Projects",
-      project1Title: "HTML & CSS Project",
-      project1Desc: "A sample website built with HTML and CSS",
-      project1Link: "View"
-    }
-  };
-
-  function setLanguage(lang) {
-    document.querySelectorAll("[data-translate]").forEach(el => {
-      const key = el.getAttribute("data-translate");
-      el.innerText = translations[lang][key];
-    });
-  }
+  fa: {
+    name: "محمد جواد میرگلو",
+    job: "برنامه‌نویس و توسعه‌دهنده وب",
+    about: "درباره من",
+    aboutText: "عاشق برنامه‌نویسی و ساخت پروژه‌های خلاقانه‌ام.",
+    projects: "پروژه‌ها",
+    project1Title: "پروژه HTML و CSS",
+    project1Desc: "یک وبسایت نمونه با HTML و CSS",
+    project1Link: "مشاهده",
+    project2Title: "پروژه جاوااسکریپت",
+    project2Desc: "نمونه پروژه جاوااسکریپت",
+    project2Link: "مشاهده",
+    blog: "مقالات",
+    blogPost1Title: "اولین مقاله من",
+    blogPost1Desc: "این مقاله درباره تجربه‌های من در یادگیری برنامه‌نویسی است."
+  },
+  en: {
+    name: "Mohammad Javad Mirgloo",
+    job: "Web Developer",
+    about: "About Me",
+    aboutText: "I love programming and building creative projects.",
+    projects: "Projects",
+    project1Title: "HTML & CSS Project",
+    project1Desc: "A sample website built with HTML and CSS",
+    project1Link: "View",
+    project2Title: "JavaScript Project",
+    project2Desc: "A sample JavaScript project",
+    project2Link: "View",
+    blog: "Blog
