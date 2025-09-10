@@ -359,3 +359,71 @@ form button:hover {
     display: block;
   }
       }
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.circle-skill {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.circle-skill svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg); /* شروع از بالا */
+}
+
+.circle-skill circle {
+  fill: none;
+  stroke-width: 15;
+  stroke-linecap: round;
+}
+
+.circle-skill circle:first-child {
+  stroke: #222; /* بک‌گراند دایره */
+  opacity: 0.2;
+}
+
+.circle-skill circle:last-child {
+  stroke: url(#rainbowGradient);
+  stroke-dasharray: 440;
+  stroke-dashoffset: calc(440 - (440 * var(--percent)) / 100);
+  animation: rainbowMove 4s linear infinite;
+}
+
+/* متن درصد */
+.circle-skill .percent {
+  position: absolute;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  z-index: 2;
+}
+
+/* اسم مهارت */
+.circle-skill p {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* گرادینت رنگین‌کمونی */
+svg defs linearGradient {
+  animation: rainbowMove 4s linear infinite;
+}
+
+@keyframes rainbowMove {
+  0% { stroke: url(#rainbowGradient); }
+  100% { stroke: url(#rainbowGradient); }
+}
