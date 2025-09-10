@@ -68,3 +68,30 @@ document.querySelectorAll(".navbar a").forEach(link => {
         document.querySelector(".navbar").classList.remove("show");
     });
 });
+// --- برای منوی موبایل ---
+const menuToggle = document.getElementById("menu-toggle");
+const navbarUl = document.querySelector(".navbar ul");
+
+menuToggle.addEventListener("click", () => {
+  navbarUl.classList.toggle("show");
+});
+
+
+// --- برای پر شدن دایره‌های مهارت ---
+document.querySelectorAll(".circle-skill").forEach(circleSkill => {
+  const percentElement = circleSkill.querySelector(".percent");
+  const circle = circleSkill.querySelector("circle:last-child");
+
+  const radius = circle.r.baseVal.value;
+  const circumference = 2 * Math.PI * radius;
+
+  circle.style.strokeDasharray = circumference;
+  circle.style.strokeDashoffset = circumference;
+
+  // درصد از data-percent خونده میشه
+  const percent = percentElement.dataset.percent;
+  const offset = circumference - (percent / 100) * circumference;
+
+  circle.style.transition = "stroke-dashoffset 2s ease";
+  circle.style.strokeDashoffset = offset;
+});
