@@ -197,3 +197,17 @@ body.dark-mode .card a {
   text-decoration: none;
   font-weight: bold;
 }
+.card {
+  background: #111;      /* بک‌گراند مشکی برای حالت تاریک */
+  color: #fff;           /* متن سفید */
+  padding: 20px;         /* فاصله داخلی */
+  margin: 20px 0;        /* فاصله بین کارت‌ها */
+  border-radius: 10px;   /* گوشه‌های گرد */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* سایه خفن */
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
