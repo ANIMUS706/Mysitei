@@ -211,3 +211,9 @@ body.dark-mode .card a {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
 }
+p {
+  background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold; /* برای شفاف‌تر شدن رنگ‌ها */
+}
