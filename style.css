@@ -184,17 +184,19 @@ body.dark-mode .btn:hover {
 .card h3, .card p {
   color: #111; /* متن تیره */
 }
-
 /* متن‌ها در حالت تاریک */
 body.dark-mode .card {
-  background: #222; /* پس‌زمینه تاریک */
+  background: #222;       /* پس‌زمینه تاریک */
 }
-body.dark-mode .card h3,
+
+body.dark-mode .card h3 {
+  color: #66ccff;  /* تیتر آبی یخی */
+}
+
 body.dark-mode .card p {
-  color: #fff; /* متن سفید */
+  color: #cccccc;  /* متن توضیح خاکستری ملایم */
 }
-body.dark-mode .card {
-  background: #222; /* پس‌زمینه تاریک */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+body.dark-mode .card a {
+  color: #00ffcc;  /* لینک سبز نئونی */
 }
