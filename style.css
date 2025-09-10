@@ -367,16 +367,6 @@ form button:hover {
   margin-top: 20px;
 }
 
-.circle-skill {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 
 .circle-skill circle {
   fill: none;
