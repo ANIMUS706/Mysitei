@@ -59,3 +59,6 @@ function setLanguage(lang) {
 document.getElementById("btn-fa").addEventListener("click", () => setLanguage("fa"));
 document.getElementById("btn-en").addEventListener("click", () => setLanguage("en"));
     
+document.getElementById("menu-toggle").addEventListener("click", function() {
+  document.querySelector(".navbar ul").classList.toggle("show");
+});
