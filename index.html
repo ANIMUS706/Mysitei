@@ -30,33 +30,37 @@
 
   <!-- پروفایل -->
   <header>
+    <div class="language-switcher">
+  <button onclick="setLanguage('fa')">🇮🇷 فارسی</button>
+  <button onclick="setLanguage('en')">🇬🇧 English</button>
+    </div>
     <button id="theme-toggle">🌓 تغییر تم</button>
     <img src="images/profile.jpg" alt="پروفایل">
-    <h1>محمد جواد میرگلو</h1>
-    <p>برنامه‌نویس و توسعه‌دهنده وب</p>
+    <h1>محمد جواد میرگلو</h1 data-translate="name">
+    <p>برنامه‌نویس و توسعه‌دهنده وب</p data-translate="job">
   </header>
 
   <!-- درباره من -->
   <section id="about">
     <div class="card"   
-    <h2>درباره من</h2>
-    <p>من یک توسعه‌دهنده علاقه‌مند به یادگیری تکنولوژی‌های جدید هستم. عاشق برنامه‌نویسی و ساخت پروژه‌های خلاقانه‌ام.</p>
+    <h2>درباره من</h2 data-translate="about">
+    <p>من یک توسعه‌دهنده علاقه‌مند به یادگیری تکنولوژی‌های جدید هستم. عاشق برنامه‌نویسی و ساخت پروژه‌های خلاقانه‌ام.</p data-translate="aboutText">
     </div>
   </section>
 
   <!-- پروژه‌ها -->
   <section id="projects">
     <div class="card"
-    <h2>پروژه‌ها</h2>
+    <h2>پروژه‌ها</h2 data-translate="projects">
     <div class="project">
-      <h3>پروژه 1</h3>
-      <p>یک وبسایت نمونه با HTML و CSS</p>
-      <a href="#">مشاهده</a>
+      <h3>پروژه 1</h3 data-translate="project1Title">
+      <p>یک وبسایت نمونه با HTML و CSS</p data-translate="project1Desc">
+      <a href="#">مشاهده</a data-translate="project1Link">
     </div>
     <div class="project">
-      <h3>پروژه 2</h3>
-      <p>نمونه پروژه جاوااسکریپت</p>
-      <a href="#">مشاهده</a>
+      <h3>پروژه 2</h3 data-translate="project2Title">
+      <p>نمونه پروژه جاوااسکریپت</p data-translate="project2Desc">
+      <a href="#">مشاهده</a data-translate="project2Link">
     </div>
     </div>
   </section>
@@ -128,6 +132,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
