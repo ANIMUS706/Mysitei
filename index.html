@@ -1,681 +1,158 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <!-- 🌟 SEO & Meta Tags -->
-<title>رزومه و نمونه کارهای من | محمد جواد</title>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Meta Description -->
-<meta name="description" content="رزومه و نمونه کارهای من در زمینه طراحی وب، برنامه‌نویسی و پروژه‌های خلاقانه.">
-
-<!-- Meta Keywords -->
-<meta name="keywords" content="رزومه, نمونه کار, برنامه نویس, طراحی وب, توسعه وب, محمد جواد">
-
-<!-- Meta Author -->
-<meta name="author" content="محمد جواد">
-
-<!-- Open Graph (برای اشتراک‌گذاری در تلگرام/واتساپ/فیسبوک) -->
-<meta property="og:title" content="رزومه و نمونه کارهای من">
-<meta property="og:description" content="بخشی از پروژه‌ها و توانایی‌های من در طراحی و برنامه‌نویسی وب.">
-<meta property="og:image" content="https://animus706.github.io/images/Jio.jpeg">
-<meta property="og:url" content="https://animus706.github.io/">
-<meta property="og:type" content="website">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="رزومه و نمونه کارهای من">
-<meta name="twitter:description" content="یک رزومه آنلاین مدرن و خفن.">
-<meta name="twitter:image" content="https://animus706.github.io/images/Jio.jpeg">
-  <meta property="og:image" content="https://animus706.github.io/images/Jio.jpeg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رزومه من</title>
   <style>
-    #music-btn {
-  background: linear-gradient(90deg, #00ffcc, #7700ff, #00ffcc);
-  background-size: 300%;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  border-radius: 12px;
-  padding: 12px 25px;
-  cursor: pointer;
-  box-shadow: 0 0 15px #00ffcc, 0 0 25px #7700ff;
-  transition: 0.3s ease;
-  animation: neonMove 5s linear infinite;
-}
-
-#music-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px #00ffcc, 0 0 35px #7700ff;
-}
-
-@keyframes neonMove {
-  0% { background-position: 0%; }
-  100% { background-position: 300%; }
-}
-    .slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 15px;
-}
-.slide {
-  flex: 0 0 300px;
-  scroll-snap-align: start;
-  border-radius: 12px;
-  overflow: hidden;
-}
-.slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-    /* بخش مهارت‌ها */
-#skills {
-  margin-top: 40px;
-}
-
-.skill {
-  margin-bottom: 20px;
-}
-    .skill {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.skill p {
-  display: flex;
-  justify-content: space-between; /* متن سمت چپ - درصد سمت راست */
-  margin: 0 0 8px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.percent {
-  color: #66aaff;
-  font-weight: normal;
-}
-.progress {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  overflow: hidden;
-  height: 12px;
-}
-
-.progress span {
-  display: block;
-  height: 100%;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  border-radius: 20px;
-}
-    .progress {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  overflow: hidden;
-  height: 12px;
-  margin-bottom: 15px;
-}
-
-.progress span {
-  display: block;
-  height: 100%;
-  background: linear-gradient(90deg, #0066ff, #0072ff);
-  border-radius: 20px;
-  width: 0; /* اول خالی */
-  animation: fillProgress 2s ease-out forwards;
-}
-
-@keyframes fillProgress {
-  from { width: 0; }
-  to { width: var(--progress-width); }
-}
-    /* ردیف درباره من */
-.about-row{
-  display:grid;
-  grid-template-columns: 120px 1fr; /* آواتار + متن */
-  gap:1rem;
-  align-items:center;
-}
-/* قاب آواتار */
-.avatar{
-  width:110px; height:110px;
-  border-radius:50%;
-  overflow:hidden;
-  border:2px solid rgba(255,255,255,.25);
-  box-shadow:0 8px 24px rgba(0,0,0,.35), 0 0 0 6px rgba(255,255,255,.06) inset;
-  background:rgba(255,255,255,.04);
-}
-
-/* خود تصویر */
-.avatar img{
-  width:100%; height:100%;
-  object-fit:cover;
-  display:block;
-  filter:saturate(1.1);
-}
-    .avatar img {
-  border: 3px solid #00c3ff;   /* خط دور آبی */
-  border-radius: 50%;          /* گرد کردن کامل */
-  animation: fadeIn 1.2s ease-in-out; /* انیمیشن ظاهر شدن */
-  transition: transform 0.3s ease;    /* برای افکت هاور */
-}
-
-.avatar img:hover {
-  transform: scale(1.1) rotate(3deg); /* وقتی موس روش میره */
-}
-
-/* انیمیشن ظاهر شدن */
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.8); }
-  to   { opacity: 1; transform: scale(1); }
-}
-
-/* ریسپانسیو موبایل */
-@media (max-width:640px){
-  .about-row{ grid-template-columns: 1fr; }
-  .avatar{ margin:0 auto; }
-}
-    body {
+    * {
       margin: 0;
-      font-family: sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: tahoma, sans-serif;
+    }
+
+    body {
       color: white;
       text-align: center;
     }
-    
-    /* محتوای اصلی */
-    .content {
-      position: relative;
-      z-index: 1;
-      padding: 40px;
-      margin: 100px auto;
-      background: rgba(0, 0, 0, 0.6); /* نیمه‌شفاف برای خوانایی متن */
-      border-radius: 12px;
-      width: 80%;
-      max-width: 800px;
+
+    /* ویدئو پس زمینه */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
     }
 
-    h1 {
+    header {
+      padding: 100px 20px 50px;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+    }
+
+    section {
+      padding: 50px 20px;
+      background: rgba(0,0,0,0.6);
+      margin: 20px;
+      border-radius: 12px;
+    }
+
+    h2 {
       margin-bottom: 20px;
     }
 
-    p {
-      font-size: 18px;
-      line-height: 1.8;
+    .project, .blog-post {
+      margin: 15px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      max-width: 500px;
     }
-    /* ===== About Section ===== */
-:root{
-  --card-bg: rgba(0,0,0,.55);
-  --card-border: rgba(255,255,255,.08);
-}
-.section{
-  position: relative;           /* بالاتر از لایه تاریک */
-  z-index: 1; /* همه سکشن‌ها بالای ویدئو */
-  width: min(960px, 92%);
-  margin: 2rem auto;
- padding: 50px 20px; /* فاصله کافی از لبه‌ها */ 
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  line-height: 1.9;
-  color: #fff /* سفید برای دیده شدن */
-}
-.section h2{
-  margin: 0 0 .75rem;
-  font-size: clamp(1.2rem, 2vw + 1rem, 2rem);
-  position: relative;
-  z-index: 1; /* همه سکشن‌ها بالای ویدئو */
-  color: #fff /* سفید برای دیده شدن */
-  padding: 50px 20px; /* فاصله کافی از لبه‌ها */
-}
-.about-row{
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 1rem;
-  align-items: center;
-}
-.avatar{
-  width: 110px; height: 110px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid rgba(255,255,255,.25);
-}
-.avatar img{ width:100%; height:100%; object-fit: cover; }
-.badges{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.75rem; }
-.badge{
-  padding:.35rem .6rem;
-  border:1px solid var(--card-border);
-  border-radius:999px;
-  font-size:.9rem;
-}
-/* موبایل */
-@media (max-width:640px){
-  .about-row{ grid-template-columns: 1fr; text-align: center; }
-  .avatar{ margin: 0 auto; }
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
 
-.project-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  padding: 15px;
-  text-align: center;
-  backdrop-filter: blur(5px);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
+    .contact-links a {
+      margin: 0 10px;
+      color: cyan;
+      text-decoration: none;
+    }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-}
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
 
-.project-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
+    form input, form textarea {
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
 
-.project-card h3 {
-  margin: 10px 0;
-  color: #fff;
-}
-
-.project-card p {
-  color: #bbb;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.project-card .btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  border-radius: 10px;
-  background: #00ffaa;
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.project-card .btn:hover {
-  background: #00cc88;
-}
-
-#contact h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.contact-links a {
-  margin: 0 15px;
-  color: #00ffcc;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-form {
-  margin-top: 30px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-form input, form textarea {
-  margin: 10px 0;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-}
-
-form button {
-  padding: 12px;
-  background: #00ffcc;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-  .section {
-  opacity: 1;
-  transform: translateY(40px);
-  transition: all 0.8s ease-out;
-  position: relative;
-  z-index: 1; /* همه سکشن‌ها بالای ویدئو */
-  color: #fff /* سفید برای دیده شدن */
-  padding: 50px 20px; /* فاصله کافی از لبه‌ها */ 
-}
-.section.show {
-  opacity: 1;
-  transform: translateY(50px);
-  position: relative;
-  z-index: 1; /* همه سکشن‌ها بالای ویدئو */
-  color: #fff /* سفید برای دیده شدن */
-  padding: 50px 20px; /* فاصله کافی از لبه‌ها */
- /* استایل کلی فرم */
-}
-form {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-}
-
-/* ورودی‌ها */
-form input, 
-form textarea {
-  width: 100%;
-  padding: 12px 15px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  font-size: 16px;
-}
-
-/* دکمه ارسال */
-form button {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  background: linear-gradient(135deg, #00ffe7, #00bfff);
-  color: #fff;
-  transition: 0.3s ease;
-}
-
-form button:hover {
-  background: linear-gradient(135deg, #00bfff, #0077ff);
-}
-
-/* مخصوص موبایل */
-@media (max-width: 768px) {
-  form {
-    width: 90%;
-    padding: 15px;
-  }
-
-  form input, 
-  form textarea {
-    font-size: 15px;
-  }
-
-  form button {
-    font-size: 16px;
-    padding: 12px;
-  }
-}
-  /* استایل بخش بلاگ */
-#blog {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.blog-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.blog-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 20px;
-  width: 300px;
-  text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.blog-card:hover {
-  transform: translateY(-10px);
-}
-
-.blog-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.blog-card h3 {
-  margin: 15px 0 10px;
-}
-
-.blog-card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #00ff99;
-  text-decoration: none;
-}
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CTYGKN2ZES"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CTYGKN2ZES');
-</script>
+    form button {
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      border: none;
+      color: white;
+      padding: 12px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-  <video autoplay muted loop width="100%">
-  <source src="video.mp4" type="video/mp4">
+
+  <!-- ویدئو پس زمینه -->
+  <video autoplay muted loop id="bg-video">
+    <source src="video.mp4" type="video/mp4">
+    مرورگر شما از ویدئو پشتیبانی نمی‌کند.
   </video>
-  <section id="blog" class="section">
-  <h2>📚 مقالات من</h2>
 
-  <div class="blog-container">
-    <div class="blog-card">
-      <img src="images/blog1.jpg" alt="مقاله اول">
-      <h3>شروع یادگیری HTML و CSS</h3>
-      <p>در این مقاله یاد می‌گیری چطور اولین صفحه وب خودت رو با HTML و CSS بسازی...</p>
-      <a href="#">بیشتر بخوانید</a>
-    </div>
+  <!-- هدر -->
+  <header>
+    <img src="images/profile.jpg" alt="پروفایل">
+    <h1>محمد جواد میرگلو</h1>
+    <p>برنامه‌نویس و توسعه‌دهنده وب</p>
+  </header>
 
-    <div class="blog-card">
-      <img src="images/blog2.jpg" alt="مقاله دوم">
-      <h3>جاوااسکریپت برای مبتدی‌ها</h3>
-      <p>جاوااسکریپت زبانیه که سایت رو زنده می‌کنه! این مقاله شروع خوبی برات خواهد بود...</p>
-      <a href="#">بیشتر بخوانید</a>
-    </div>
-
-    <div class="blog-card">
-      <img src="images/blog3.jpg" alt="مقاله سوم">
-      <h3>ترفندهای طراحی واکنش‌گرا</h3>
-      <p>با این نکات مطمئن شو که سایتت روی همه موبایل‌ها و تبلت‌ها عالی دیده میشه...</p>
-      <a href="#">بیشتر بخوانید</a>
-    </div>
-  </div>
-  </section>
-  <section id="contact">
-  <h2>تماس با من</h2>
-  <p>برای همکاری یا پرسش می‌تونی از راه‌های زیر در ارتباط باشی:</p>
-    <img src="images/Jio.jpeg" alt="My Image" width="300">
-  
-  <div class="contact-links">
-    <a href="mailto:mhmdjwadmyrglw@gmail.com">ایمیل</a>
-    <a href="https://github.com/ANIMUS706" target="_blank">گیت‌هاب</a>
-    <a href="https://instagram.com/mhmd.jwadbyat" target="_blank">اینستاگرام</a>
-  </div>
-  
-  <!-- فرم تماس (اختیاری) -->
-  <form id="contact-form">
-  <input type="text" name="name" placeholder="نام شما" required>
-  <input type="email" name="email" placeholder="ایمیل شما" required>
-  <textarea name="message" placeholder="پیام شما" required></textarea>
-  <button type="submit">ارسال</button>
-</form>
-  </section>
-  <section id="projects" class="section">
-  <h2>پروژه‌ها</h2>
-
-  <div class="projects">
-    <div class="project-card">
-      <img src="images/project1.png" alt="پروژه 1">
+  <!-- پروژه‌ها -->
+  <section id="projects">
+    <h2>پروژه‌ها</h2>
+    <div class="project">
       <h3>پروژه ۱</h3>
       <p>یک وبسایت نمونه با HTML و CSS</p>
-      <a href="https://github.com/animus706/project1" target="_blank" class="btn">مشاهده</a>
+      <a href="#">مشاهده</a>
     </div>
-
-    <div class="project-card">
-      <img src="images/project2.png" alt="پروژه 2">
-      <h3>پروژه ۲</h3>
-      <p>افکت‌های جذاب با JavaScript</p>
-      <a href="https://animus706.github.io/project2" target="_blank" class="btn">مشاهده</a>
-    </div>
-
-    <div class="project-card">
-      <img src="images/project3.png" alt="پروژه 3">
-      <h3>پروژه ۳</h3>
-      <p>یک نمونه‌ی خلاقانه با انیمیشن و استایل‌های مدرن</p>
-      <a href="https://animus706.github.io/project3" target="_blank" class="btn">مشاهده</a>
-    </div>
-    <section id="comments" class="section">
-  <h2>نظرات شما</h2>
-  <div id="giscus"></div>
-    </section>
-
-    <script src="https://giscus.app/client.js"
-        data-repo="animus706/animus706.github.io"
-        data-repo-id="R_kgDOPrZ-hQ"
-        data-category="comments"
-        data-category-id="DIC_kwDOPrZ-hc4CvM45"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-    </script>
-  </div>
-</section>
-  <section id="about" class="section">
-  <h2>درباره من</h2>
-
-  <div class="about-row">
-    <div class="avatar">
-      <img src="Jio.jpeg"
-     width="110" height="110"
-     loading="lazy" decoding="async">
-    </div>
-
-    <div>
-      <p>
-        سلام! من جواد هستم، ۱۶ ساله و توسعه‌دهندهٔ وب مبتدی.
-        به HTML، CSS و JavaScript علاقه‌مندم و هر روز دارم بهتر می‌شم.
-        هدفم ساخت رابط‌های تمیز با افکت‌های جذابه 🌟
-      </p>
-      <div class="badges">
-        <span class="badge">🇮🇷 فارسی</span>
-        <span class="badge">🇬🇧 انگلیسی</span>
-        <span class="badge">🇩🇪 آلمانی</span>
-        <span class="badge">⚡ تازه‌کارِ پرانرژی</span>
-      </div>
-    </div>
-  </div>
   </section>
-<section id="skills" class="section">
-  <h2>مهارت‌ها</h2>
 
-  <div class="skill">
-    <p>HTML <span class="percent">90%</span></p>
-    <div class="progress">
-      <span style="--progress-width: 90%;"></span>
+  <!-- مقالات -->
+  <section id="blog">
+    <h2>مقالات</h2>
+    <div class="blog-post">
+      <h3>اولین مقاله من</h3>
+      <p>این مقاله درباره تجربه‌های من در یادگیری برنامه‌نویسی است.</p>
     </div>
-  </div>
+  </section>
 
-  <div class="skill">
-    <p>CSS <span class="percent">85%</span></p>
-    <div class="progress">
-      <span style="--progress-width: 85%;"></span>
+  <!-- فرم تماس -->
+  <section id="contact">
+    <h2>تماس با من</h2>
+    <form>
+      <input type="text" placeholder="نام شما">
+      <input type="email" placeholder="ایمیل شما">
+      <textarea placeholder="پیام شما"></textarea>
+      <button type="submit">ارسال</button>
+    </form>
+    <div class="contact-links">
+      <a href="mailto:test@gmail.com">ایمیل</a>
+      <a href="https://github.com/animus706" target="_blank">گیت‌هاب</a>
+      <a href="https://instagram.com" target="_blank">اینستاگرام</a>
     </div>
-  </div>
+  </section>
 
-  <div class="skill">
-    <p>JavaScript <span class="percent">70%</span></p>
-    <div class="progress">
-      <span style="--progress-width: 70%;"></span>
-    </div>
-  </div>
-</section>
-   
-  <!-- محتوای اصلی -->
-  <div class="content">
-    <h1>نمونه کارهای من</h1>
-    <p>👋 سلام خوش اومدی</p>
-    <p>💻 اینجا پروژه‌هامو میذارم</p>
-    <p>😊 امیدوارم خوشت بیاد</p>
-  </div>
-    <script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-<script type="text/javascript">
-  (function() {
-    emailjs.init("PUBLIC_KEY"); // اینجا Public Key خودتو بذار
-  })();
-
-  // هندل کردن فرم
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    emailjs.sendForm("SERVICE_ID", "TEMPLATE_ID", this)
-      .then(function() {
-        alert("پیام با موفقیت ارسال شد ✅");
-      }, function(error) {
-        alert("خطا در ارسال ❌", error);
-      });
-  });
-<audio id="bg-music" loop>
-  <source src="https://raw.githubusercontent.com/animus706/animus706.github.io/main/ss.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-  const bgMusic = document.getElementById("bg-music");
-
-  function playMusicOnce() {
-    bgMusic.play().catch(err => console.log("پخش نشد:", err));
-    document.removeEventListener("click", playMusicOnce);
-    document.removeEventListener("scroll", playMusicOnce);
-  }
-
-  // وقتی کاربر اولین بار کلیک یا اسکرول کنه → موزیک شروع میشه
-  document.addEventListener("click", playMusicOnce);
-  document.addEventListener("scroll", playMusicOnce);
-  <script src="https://giscus.app/client.js"
-        data-repo="animus706/animus706.github.io"
-        data-repo-id="R_kgDOPrZ-hQ"
-        data-category="comments"
-        data-category-id="DIC_kwDOPrZ-hc4CvM45"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
 </body>
 </html>
+
 
 
 
