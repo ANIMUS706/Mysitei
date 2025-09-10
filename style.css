@@ -421,8 +421,8 @@ svg defs linearGradient {
 .circle-skill circle {
   fill: none;
   stroke-width: 15;
-  cx: 70;
-  cy: 70;
+  cx: 75;
+  cy: 75;
   r: 70;
 }
 
