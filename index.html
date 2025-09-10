@@ -1,137 +1,114 @@
 <!DOCTYPE html>
 <html lang="fa">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- عنوان سایت -->
-  <title>رزومه محمد جواد - برنامه‌نویس وب</title>
 
-  <!-- توضیح کوتاه (نمایش در گوگل) -->
-  <meta name="description" content="رزومه آنلاین محمد جواد میرگلو | برنامه‌نویس وب، طراح فرانت‌اند و توسعه‌دهنده پر انرژی.">
+  <!-- Title -->
+  <title data-translate="name">محمد جواد میرگلو</title>
 
-  <!-- کلمات کلیدی (الان کمتر استفاده میشه ولی بد نیست) -->
-  <meta name="keywords" content="رزومه, برنامه نویس, وب, طراحی سایت, فرانت اند, محمد جواد میرگلو">
-
-  <!-- نویسنده -->
+  <!-- SEO -->
+  <meta name="description" content="رزومه و پروژه‌های محمد جواد میرگلو، برنامه‌نویس و توسعه‌دهنده وب">
+  <meta name="keywords" content="محمد جواد میرگلو, برنامه نویس, توسعه دهنده وب, HTML, CSS, JavaScript, رزومه">
   <meta name="author" content="محمد جواد میرگلو">
 
-  <!-- فاویکون (آیکون کوچیک مرورگر) -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <!-- برای شبکه‌های اجتماعی (Open Graph) -->
-  <meta property="og:title" content="رزومه آنلاین محمد جواد میرگلو | برنامه‌نویس وب">
-  <meta property="og:description" content="رزومه آنلاین محمد جواد میرگلو | برنامه‌نویس وب با تجربه در طراحی و توسعه سایت‌های مدرن. مهارت‌ها، نمونه‌کارها و اطلاعات تماس را اینجا ببینید.">
-  <meta property="Jio.jpeg" content="https://your-site.com/preview.png">
-  <meta property="https://animus706.github.io" content="https://your-site.com">
+  <!-- Open Graph -->
+  <meta property="og:title" content="محمد جواد میرگلو | برنامه‌نویس و توسعه‌دهنده وب">
+  <meta property="og:description" content="برنامه‌نویسی و ساخت پروژه‌های خلاقانه در HTML, CSS و JavaScript">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <meta property="og:url" content="https://animus706.github.io">
+  <meta property="og:image" content="https://animus706.github.io/images/preview.png">
 
-  <!-- پروفایل -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="محمد جواد میرگلو | برنامه‌نویس و توسعه‌دهنده وب">
+  <meta name="twitter:description" content="برنامه‌نویسی و ساخت پروژه‌های خلاقانه در HTML, CSS و JavaScript">
+  <meta name="twitter:image" content="https://animus706.github.io/images/preview.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
   <header>
-    <div class="language-switcher">
-  <button onclick="setLanguage('fa')">🇮🇷 فارسی</button>
-  <button onclick="setLanguage('en')">🇬🇧 English</button>
-    </div>
-    <button id="theme-toggle">🌓 تغییر تم</button>
-    <img src="images/profile.jpg" alt="پروفایل">
-    <h1>محمد جواد میرگلو</h1 data-translate="name">
-    <p>برنامه‌نویس و توسعه‌دهنده وب</p data-translate="job">
+    <h1 data-translate="name">محمد جواد میرگلو</h1>
+    <p data-translate="job">برنامه‌نویس و توسعه‌دهنده وب</p>
   </header>
 
-  <!-- درباره من -->
-  <section id="about">
-    <div class="card"   
-    <h2>درباره من</h2 data-translate="about">
-    <p>من یک توسعه‌دهنده علاقه‌مند به یادگیری تکنولوژی‌های جدید هستم. عاشق برنامه‌نویسی و ساخت پروژه‌های خلاقانه‌ام.</p data-translate="aboutText">
-    </div>
-  </section>
+  <!-- دکمه‌های تغییر زبان -->
+  <div>
+    <button id="btn-fa">فارسی</button>
+    <button id="btn-en">English</button>
+  </div>
 
-  <!-- پروژه‌ها -->
-  <section id="projects">
-    <div class="card"
-    <h2>پروژه‌ها</h2 data-translate="projects">
-    <div class="project">
-      <h3>پروژه 1</h3 data-translate="project1Title">
-      <p>یک وبسایت نمونه با HTML و CSS</p data-translate="project1Desc">
-      <a href="#">مشاهده</a data-translate="project1Link">
-    </div>
-    <div class="project">
-      <h3>پروژه 2</h3 data-translate="project2Title">
-      <p>نمونه پروژه جاوااسکریپت</p data-translate="project2Desc">
-      <a href="#">مشاهده</a data-translate="project2Link">
-    </div>
-    </div>
-  </section>
+  <!-- دکمه حالت روشن/تاریک -->
+  <button id="toggle-dark-mode">🌙 Dark Mode</button>
 
-  <!-- بلاگ -->
-  <section id="blog">
-    <div class="card"
-    <h2>مقالات</h2 data-translate="blog">
-    <div class="blog-post">
-      <h3>اولین مقاله من</h3>
-      <p>این مقاله درباره تجربه‌های من در یادگیری برنامه‌نویسی است.</p>
-    </div>
-    </div>
-  </section>
+  <main>
+    <section>
+      <h2 data-translate="about">درباره من</h2>
+      <p data-translate="aboutText">برنامه‌نویسی و ساخت پروژه‌های خلاقانه‌ام</p>
+    </section>
 
-  <!-- مهارت‌ها -->
-  <section id="skills">
-    <div class="card"
-    <h2>مهارت‌ها</h2>
-    <div class="skill">
-      <p>HTML</p>
-      <div class="skill-bar"><div class="skill-fill" style="width:90%">90%</div></div>
-    </div>
-    <div class="skill">
-      <p>CSS</p>
-      <div class="skill-bar"><div class="skill-fill" style="width:80%">80%</div></div>
-    </div>
-    <div class="skill">
-      <p>JavaScript</p>
-      <div class="skill-bar"><div class="skill-fill" style="width:70%">70%</div></div>
-    </div>
-    </div>
-  </section>
+    <section>
+      <h2 data-translate="projects">پروژه‌ها</h2>
+      <div>
+        <h3 data-translate="project1Title">پروژه HTML و CSS</h3>
+        <p data-translate="project1Desc">یک وبسایت نمونه با HTML و CSS</p>
+        <a href="#" data-translate="project1Link">مشاهده</a>
+      </div>
+      <div>
+        <h3 data-translate="project2Title">پروژه جاوااسکریپت</h3>
+        <p data-translate="project2Desc">نمونه پروژه جاوااسکریپت</p>
+        <a href="#" data-translate="project2Link">مشاهده</a>
+      </div>
+    </section>
 
-  <!-- تماس با من -->
-  <section id="contact">
-    <div class="card"
-    <h2>تماس با من</h2>
-    <form>
-      <input type="text" placeholder="نام شما"><br>
-      <input type="email" placeholder="ایمیل شما"><br>
-      <textarea placeholder="پیام شما"></textarea><br>
-      <button type="submit">ارسال</button>
-    </form>
-    <p>
-      <a href="#">ایمیل</a> | 
-      <a href="#">گیت‌هاب</a> | 
-      <a href="#">اینستاگرام</a>
-    </p>
-  </section>
-</div>
+    <section>
+      <h2 data-translate="blog">مقالات</h2>
+      <article>
+        <h3 data-translate="blogPost1Title">اولین مقاله من</h3>
+        <p data-translate="blogPost1Desc">این یک توضیح نمونه برای مقاله من است</p>
+      </article>
+    </section>
 
+    <section>
+      <h2>ارتباط با من</h2>
+      <form>
+        <input type="text" placeholder="نام شما">
+        <input type="email" placeholder="ایمیل شما">
+        <textarea placeholder="پیام شما"></textarea>
+        <button type="submit">ارسال</button>
+      </form>
+      <p>
+        <a href="#">ایمیل</a> |
+        <a href="#">گیت‌هاب</a> |
+        <a href="#">اینستاگرام</a>
+      </p>
+    </section>
+  </main>
 
+  <!-- بخش کامنت گیت‌هاب -->
   <script src="https://giscus.app/client.js"
-        data-repo="animus706/animus706.github.io"
-        data-repo-id="R_kgDOPrZ-hQ"
-        data-category="comments"
-        data-category-id="DIC_kwDOPrZ-hc4CvM45"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
+    data-repo="animus706/animus706.github.io"
+    data-repo-id="R_kgD0PrZ-hQ"
+    data-category="comments"
+    data-category-id="DIC_kwD0PrZ-hc4C"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
   </script>
-<script src="script.js"></script>
+
+  <!-- اسکریپت اصلی -->
+  <script src="script.js" defer></script>
 </body>
 </html>
+
 
 
 
