@@ -307,3 +307,55 @@ form button:hover {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+/* حالت پیشفرض (دسکتاپ) */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff00cc;
+}
+
+/* دکمه منو همبرگری */
+#menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* حالت موبایل */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+      }
