@@ -432,7 +432,8 @@ svg defs linearGradient {
   fill: transparent !important; /* داخل دایره خالی */
 }
 section, .card, .content, .box {
-  background: #000;      /* پس‌زمینه سیاه */
-  border-radius: 12px;   /* گوشه‌ها گرد بشن (اختیاری) */
-  padding: 20px;         /* فاصله متن از لبه‌ها */
+  background: #000 !important; /* پس‌زمینه سیاه */
+  color: #fff !important;      /* متن سفید */
+  border-radius: 12px;
+  padding: 20px;
 }
