@@ -411,9 +411,6 @@ svg defs linearGradient {
   height: 120px;
   transform: rotate(-90deg);
 }
-.circle-skill circle {
-  fill: none;
-}
 
 .circle-skill circle:first-child {
   stroke: #333; /* دایره پس‌زمینه */
@@ -430,4 +427,7 @@ svg defs linearGradient {
   to {
     stroke-dashoffset: var(--dashoffset);
   }
+}
+.circle-skill circle {
+  fill: transparent !important; /* داخل دایره خالی */
 }
