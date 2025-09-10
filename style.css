@@ -215,27 +215,34 @@ body.dark-mode .card {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
 }
-      .card p,
-.card h2,
-.card h3,
-.card a,
-.card span {
-  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
+#blog .card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+/* رنگین‌کمونی برای کل متن‌ها در حالت تاریک */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode p,
+.dark-mode a,
+.dark-mode span,
+.dark-mode li {
+  background: linear-gradient(
+    270deg, 
+    #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff
+  );
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
-  font-weight: bold;
-  animation: rainbow 3s linear infinite;
+  animation: rainbow 3s ease infinite;
 }
 
 @keyframes rainbow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-#blog .card {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-}
+      }
