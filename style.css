@@ -423,7 +423,7 @@ svg defs linearGradient {
   stroke-width: 15;
   cx: 75;
   cy: 75;
-  r: 65;
+  r: 68;
 }
 
 .circle-skill circle:nth-child(1) {
@@ -432,8 +432,8 @@ svg defs linearGradient {
 
 .circle-skill circle:nth-child(2) {
   stroke: url(#rainbowGradient); /* رنگین‌کمونی */
-  stroke-dasharray: 440; /* محیط دایره */
-  stroke-dashoffset: calc(440 - (440 * var(--percent)) / 100);
+  stroke-dasharray: 427; /* محیط دایره */
+  stroke-dashoffset: calc(427 - (427 * var(--percent)) / 100);
   transition: stroke-dashoffset 1s ease;
 }
 
