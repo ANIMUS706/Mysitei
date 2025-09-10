@@ -26,7 +26,6 @@ const translations = {
     blog: "مقالات",
     blogPost1Title: "اولین مقاله من",
     blogPost1Desc: "این یک توضیح نمونه برای مقاله من است"
-    skills: "مهارت ها"
   },
   en: {
     name: "Mohammad Javad Mirgloo",
@@ -42,8 +41,7 @@ const translations = {
     project2Link: "View",
     blog: "Blog",
     blogPost1Title: "My First Blog Post",
-    blogPost1Desc: "This is a sample description for my blog post"
-    skills: "skills"
+    blogPost1Desc: "This is a sample description for my blog post"  
   }
 };
 
