@@ -90,24 +90,7 @@
   </ul>
 </section>
 
-<script>
-  const form = document.getElementById("commentForm");
-  const commentList = document.getElementById("commentList");
 
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const name = document.getElementById("name").value;
-    const message = document.getElementById("message").value;
-
-    if (name && message) {
-      const li = document.createElement("li");
-      li.textContent = `${name}: ${message}`;
-      commentList.appendChild(li);
-
-      form.reset();
-    }
-  });
-</script>
   <script src="https://giscus.app/client.js"
         data-repo="animus706/animus706.github.io"
         data-repo-id="R_kgDOPrZ-hQ"
@@ -123,9 +106,10 @@
         crossorigin="anonymous"
         async>
   </script>
-
+<script src="js/script.js"></script>
 </body>
 </html>
+
 
 
 
