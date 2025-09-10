@@ -5,127 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>رزومه من</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: tahoma, sans-serif;
-    }
-
     body {
-      color: white;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
       text-align: center;
     }
-
-    /* ویدئو پس زمینه */
-    #bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      z-index: -1;
-      object-fit: cover;
-    }
-
     header {
-      padding: 100px 20px 50px;
-    }
-
-    header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin-bottom: 15px;
-    }
-
-    header h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 18px;
-    }
-
-    section {
-      padding: 50px 20px;
-      background: rgba(0,0,0,0.6);
-      margin: 20px;
-      border-radius: 12px;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-    }
-
-    .project, .blog-post {
-      margin: 15px auto;
-      padding: 20px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 10px;
-      max-width: 500px;
-    }
-
-    .contact-links a {
-      margin: 0 10px;
-      color: cyan;
-      text-decoration: none;
-    }
-
-    form {
-      max-width: 400px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-    }
-
-    form input, form textarea {
-      margin: 10px 0;
-      padding: 10px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    form button {
-      background: linear-gradient(90deg, #00f2fe, #4facfe);
-      border: none;
+      padding: 30px;
+      background: #333;
       color: white;
-      padding: 12px;
-      font-size: 18px;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+    section {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-bottom: 15px;
+      color: #222;
+    }
+    .project, .blog-post, .comment {
+      background: #eee;
+      margin: 10px;
+      padding: 15px;
       border-radius: 8px;
+    }
+    .skill {
+      margin: 10px 0;
+      text-align: left;
+    }
+    .skill-bar {
+      height: 20px;
+      background: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      text-align: right;
+      padding-right: 5px;
+      color: white;
+      font-size: 12px;
+      line-height: 20px;
+    }
+    form input, form textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
       cursor: pointer;
     }
   </style>
 </head>
 <body>
 
-  <!-- ویدئو پس زمینه -->
-  <video autoplay muted loop id="bg-video">
-    <source src="video.mp4" type="video/mp4">
-    مرورگر شما از ویدئو پشتیبانی نمی‌کند.
-  </video>
-
-  <!-- هدر -->
+  <!-- پروفایل -->
   <header>
     <img src="images/profile.jpg" alt="پروفایل">
     <h1>محمد جواد میرگلو</h1>
     <p>برنامه‌نویس و توسعه‌دهنده وب</p>
   </header>
 
+  <!-- درباره من -->
+  <section id="about">
+    <h2>درباره من</h2>
+    <p>من یک توسعه‌دهنده علاقه‌مند به یادگیری تکنولوژی‌های جدید هستم. عاشق برنامه‌نویسی و ساخت پروژه‌های خلاقانه‌ام.</p>
+  </section>
+
   <!-- پروژه‌ها -->
   <section id="projects">
     <h2>پروژه‌ها</h2>
     <div class="project">
-      <h3>پروژه ۱</h3>
+      <h3>پروژه 1</h3>
       <p>یک وبسایت نمونه با HTML و CSS</p>
+      <a href="#">مشاهده</a>
+    </div>
+    <div class="project">
+      <h3>پروژه 2</h3>
+      <p>نمونه پروژه جاوااسکریپت</p>
       <a href="#">مشاهده</a>
     </div>
   </section>
 
-  <!-- مقالات -->
+  <!-- بلاگ -->
   <section id="blog">
     <h2>مقالات</h2>
     <div class="blog-post">
@@ -134,24 +115,58 @@
     </div>
   </section>
 
-  <!-- فرم تماس -->
+  <!-- مهارت‌ها -->
+  <section id="skills">
+    <h2>مهارت‌ها</h2>
+    <div class="skill">
+      <p>HTML</p>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%">90%</div></div>
+    </div>
+    <div class="skill">
+      <p>CSS</p>
+      <div class="skill-bar"><div class="skill-fill" style="width:80%">80%</div></div>
+    </div>
+    <div class="skill">
+      <p>JavaScript</p>
+      <div class="skill-bar"><div class="skill-fill" style="width:70%">70%</div></div>
+    </div>
+  </section>
+
+  <!-- تماس با من -->
   <section id="contact">
     <h2>تماس با من</h2>
     <form>
-      <input type="text" placeholder="نام شما">
-      <input type="email" placeholder="ایمیل شما">
-      <textarea placeholder="پیام شما"></textarea>
+      <input type="text" placeholder="نام شما"><br>
+      <input type="email" placeholder="ایمیل شما"><br>
+      <textarea placeholder="پیام شما"></textarea><br>
       <button type="submit">ارسال</button>
     </form>
-    <div class="contact-links">
-      <a href="mailto:test@gmail.com">ایمیل</a>
-      <a href="https://github.com/animus706" target="_blank">گیت‌هاب</a>
-      <a href="https://instagram.com" target="_blank">اینستاگرام</a>
+    <p>
+      <a href="#">ایمیل</a> | 
+      <a href="#">گیت‌هاب</a> | 
+      <a href="#">اینستاگرام</a>
+    </p>
+  </section>
+
+  <!-- نظرات -->
+  <section id="comments">
+    <h2>نظرات</h2>
+    <div class="comment">
+      <p><strong>کاربر ۱:</strong> سایت خیلی عالی طراحی شده 👌</p>
     </div>
+    <div class="comment">
+      <p><strong>کاربر ۲:</strong> رنگ‌ها خیلی جذابن!</p>
+    </div>
+    <form>
+      <input type="text" placeholder="نام شما"><br>
+      <textarea placeholder="نظر شما"></textarea><br>
+      <button type="submit">ارسال نظر</button>
+    </form>
   </section>
 
 </body>
 </html>
+
 
 
 
