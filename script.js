@@ -59,15 +59,6 @@ function setLanguage(lang) {
 document.getElementById("btn-fa").addEventListener("click", () => setLanguage("fa"));
 document.getElementById("btn-en").addEventListener("click", () => setLanguage("en"));
     
-document.getElementById("menu-toggle").addEventListener("click", function() {
-  document.querySelector(".navbar ul").classList.toggle("show");
-});
-// بستن منو بعد از کلیک روی هر لینک
-document.querySelectorAll(".navbar a").forEach(link => {
-    link.addEventListener("click", () => {
-        document.querySelector(".navbar").classList.remove("show");
-    });
-});
 // --- برای منوی موبایل ---
 const menuToggle = document.getElementById("menu-toggle");
 const navbarUl = document.querySelector(".navbar ul");
