@@ -437,8 +437,8 @@ section, .card, .content, .box {
   border-radius: 12px;
   padding: 20px;
 }
-/* برای حالت روشن */
 body.light-mode h2 {
-  color: #000; /* یا هر رنگ تیره دلخواه */
-  font-weight: bold; /* اگه خواستی پررنگ‌تر هم باشه */
+  color: #000 !important;
+  font-weight: bold !important;
+  opacity: 1 !important;
 }
