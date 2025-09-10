@@ -247,3 +247,63 @@ body.dark-mode .card {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+/* استایل کلی فرم */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* استایل ورودی‌ها */
+form input,
+form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  resize: none;
+  transition: 0.3s;
+}
+
+/* تغییر رنگ ورودی موقع فوکوس */
+form input:focus,
+form textarea:focus {
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 0 10px #00ffe5;
+}
+
+/* دکمه ارسال رنگین‌کمونی */
+form button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+  background-size: 400% 400%;
+  animation: rainbowBtn 5s ease infinite;
+  transition: transform 0.2s;
+}
+
+/* افکت کلیک */
+form button:hover {
+  transform: scale(1.05);
+}
+
+/* انیمیشن رنگین‌کمونی */
+@keyframes rainbowBtn {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
