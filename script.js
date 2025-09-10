@@ -1,16 +1,22 @@
- const form = document.getElementById("commentForm");
-  const commentList = document.getElementById("commentList");
+const toggleButton = document.getElementById("theme-toggle");
 
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const name = document.getElementById("name").value;
-    const message = document.getElementById("message").value;
+toggleButton.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
 
-    if (name && message) {
-      const li = document.createElement("li");
-      li.textContent = `${name}: ${message}`;
-      commentList.appendChild(li);
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+    toggleButton.textContent = "☀️ Light Mode";
+  } else {
+    localStorage.setItem("theme", "light");
+    toggleButton.textContent = "🌙 Dark Mode";
+  }
+});
 
-      form.reset();
-    }
-  });
+window.addEventListener("load", () => {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    toggleButton.textContent = "☀️ Light Mode";
+  } else {
+    toggleButton.textContent = "🌙 Dark Mode";
+  }
+});
