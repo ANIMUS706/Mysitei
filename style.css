@@ -431,3 +431,8 @@ svg defs linearGradient {
 .circle-skill circle {
   fill: transparent !important; /* داخل دایره خالی */
 }
+section, .card, .content, .box {
+  background: #000;      /* پس‌زمینه سیاه */
+  border-radius: 12px;   /* گوشه‌ها گرد بشن (اختیاری) */
+  padding: 20px;         /* فاصله متن از لبه‌ها */
+}
