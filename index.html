@@ -79,9 +79,35 @@
   </section>
   <!-- بخش نظرات -->
 <section id="comments">
-  <h2>نظرات شما</h2>
-  <p>نظر و پیشنهاداتتون رو اینجا بنویسید 👇</p>
+  <h2>نظرات</h2>
+  <form id="commentForm">
+    <input type="text" id="name" placeholder="نام شما" required>
+    <textarea id="message" placeholder="نظر شما" required></textarea>
+    <button type="submit">ارسال نظر</button>
+  </form>
+  <ul id="commentList">
+    <!-- کامنت‌های جدید اینجا اضافه میشن -->
+  </ul>
+</section>
 
+<script>
+  const form = document.getElementById("commentForm");
+  const commentList = document.getElementById("commentList");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const message = document.getElementById("message").value;
+
+    if (name && message) {
+      const li = document.createElement("li");
+      li.textContent = `${name}: ${message}`;
+      commentList.appendChild(li);
+
+      form.reset();
+    }
+  });
+</script>
   <script src="https://giscus.app/client.js"
         data-repo="animus706/animus706.github.io"
         data-repo-id="R_kgDOPrZ-hQ"
@@ -97,10 +123,10 @@
         crossorigin="anonymous"
         async>
   </script>
-  </section>
 
 </body>
 </html>
+
 
 
 
