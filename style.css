@@ -238,6 +238,7 @@ body.dark-mode .card {
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;   /* 👈 این خطو اضافه کن تا متن کاملا شفاف بشه */
   animation: rainbow 3s ease infinite;
 }
 
@@ -245,4 +246,4 @@ body.dark-mode .card {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-      }
+}
