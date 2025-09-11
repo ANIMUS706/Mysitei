@@ -1,189 +1,95 @@
 <!DOCTYPE html>
-<html lang="fa">
-  <head>
-    <!-- داخل head -->
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+<html lang="fa" dir="rtl">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Title -->
-  <title data-translate="name">محمد جواد میرگلو</title>
-
-  <!-- SEO -->
-  <meta name="description" content="رزومه و پروژه‌های محمد جواد میرگلو، برنامه‌نویس و توسعه‌دهنده وب">
-  <meta name="keywords" content="محمد جواد میرگلو, برنامه نویس, توسعه دهنده وب, HTML, CSS, JavaScript, رزومه">
-  <meta name="author" content="محمد جواد میرگلو">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="محمد جواد میرگلو | برنامه‌نویس و توسعه‌دهنده وب">
-  <meta property="og:description" content="برنامه‌نویسی و ساخت پروژه‌های خلاقانه در HTML, CSS و JavaScript">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://animus706.github.io">
-  <meta property="og:image" content="https://animus706.github.io/images/preview.png">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="محمد جواد میرگلو | برنامه‌نویس و توسعه‌دهنده وب">
-  <meta name="twitter:description" content="برنامه‌نویسی و ساخت پروژه‌های خلاقانه در HTML, CSS و JavaScript">
-  <meta name="twitter:image" content="https://animus706.github.io/images/preview.png">
-
-  <!-- CSS -->
+  <title>پورتفولیو رنگین‌کمانی</title>
   <link rel="stylesheet" href="style.css">
-  </head>
-<body>
-  <header>
-    <h1 data-translate="name">محمد جواد میرگلو</h1>
-    <p data-translate="job">برنامه‌نویس و توسعه‌دهنده وب</p>
-
-  <!-- دکمه‌های تغییر زبان -->
-  <div>
-    <button id="btn-fa">فارسی</button>
-    <button id="btn-en">English</button>
-  </div>
-
-  <!-- دکمه حالت روشن/تاریک -->
-  <button id="toggle-dark-mode">🌙 Dark Mode</button>
-    <button id="menu-toggle">☰</button>
-  <nav class="navbar">
-    <ul>
-      <li><a href="#home">خانه</a></li>
-      <li><a href="#about">درباره من</a></li>
-      <li><a href="#blog">مقالات</a></li>
-      <li><a href="#contact">ارتباط با من</a></li>
-    </ul>
-  </nav>
-    <!-- Loading Screen -->
-<div id="loading">
-  <div class="spinner"></div>
-</div>
-                                             </header>
-  <main>
-    <section id="home">
-      <h2 data-translate="home" style="color:#28a745" data-aos="fade-up">خانه</h2>
-      <p data-aos="zoom-in">!به سایت من خوش اومدی</p>
-    </section>
-      <section id="about">
-      <h2 data-translate="about" style="color:#28a745" data-aos="fade-up">درباره من</h2>
-  <div class="profile-card">
+  <!-- AOS Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+<body class="light">
+  
+  <!-- Loader -->
+  <div id="loader" class="loader-screen">
     <div class="profile-ring">
-    <img src="Jio.jpeg" data-aos="flip-left" alt="عکس پروفایل من">
-    </div>
-    <p data-aos="zoom-in">سلام! من جواد هستم،توسعه‌دهنده وب...</p>
-  </div>
-      </section>
-
-    <section>
-      <h2 data-translate="projects" style="color:#28a745" data-aos="fade-up">پروژه‌ها</h2>
-      <div>
-        <h3 data-translate="project1Title" data-aos="fade-up">پروژه HTML و CSS</h3>
-        <p data-translate="project1Desc" data-aos="zoom-in">یک وبسایت نمونه با HTML و CSS</p>
-        <a href="#" data-translate="project1Link">مشاهده</a>
+      <div class="profile-inner">
+        <div class="circle"></div>
       </div>
-      <div>
-        <h3 data-translate="project2Title" data-aos="fade-up">پروژه جاوااسکریپت</h3>
-        <p data-translate="project2Desc" data-aos="zoom-in">نمونه پروژه جاوااسکریپت</p>
-        <a href="#" data-translate="project2Link">مشاهده</a>
+    </div>
+    <p>در حال بارگذاری...</p>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-title">
+      <button id="themeToggle">☀️</button>
+      <h1 id="siteTitle">پورتفولیو من</h1>
+    </div>
+    <nav>
+      <ul id="navLinks">
+        <li><a href="#home">خانه</a></li>
+        <li><a href="#projects">پروژه‌ها</a></li>
+        <li><a href="#about">درباره من</a></li>
+        <li><a href="#profile">پروفایل</a></li>
+        <li><a href="#contact">تماس</a></li>
+      </ul>
+      <button id="burger" class="burger"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <!-- Sections -->
+  <main>
+    <section id="home" data-aos="fade-up">
+      <h2>سلام! من یک توسعه‌دهنده وب هستم</h2>
+      <p>این یک دموی پورتفولیو با حالت تاریک/روشن و افکت‌هاست.</p>
+    </section>
+
+    <section id="projects" data-aos="fade-up">
+      <h3>پروژه‌ها</h3>
+      <div class="projects">
+        <article>پروژه 1</article>
+        <article>پروژه 2</article>
+        <article>پروژه 3</article>
       </div>
     </section>
 
-    <section id="blog">
-      <h2 data-translate="blog" style="color:#28a745" data-aos="fade-up">مقالات</h2>
-      <article>
-        <h3 data-translate="blogPost1Title" data-aos="zoom-in">اولین مقاله من</h3>
-        <p data-translate="blogPost1Desc" data-aos="zoom-in">این یک توضیح نمونه برای مقاله من است</p>
-      </article>
+    <section id="about" data-aos="fade-up">
+      <h3>درباره من</h3>
+      <p>اینجا توضیحاتی درباره خودت می‌نویسی.</p>
     </section>
-    <svg width="0" height="0">
-  <defs>
-    <linearGradient id="rainbowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ff0000">
-        <animate attributeName="stop-color" values="#ff0000;#ff7f00;#ffff00;#00ff00;#0000ff;#4b0082;#8f00ff;#ff0000" dur="6s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="100%" stop-color="#ff7f00">
-        <animate attributeName="stop-color" values="#ff7f00;#ffff00;#00ff00;#0000ff;#4b0082;#8f00ff;#ff0000;#ff7f00" dur="6s" repeatCount="indefinite" />
-      </stop>
-    </linearGradient>
-  </defs>
-    </svg>
-    <section id="skills">
-  <h2 data-translate="Skills" style="color:#28a745" data-aos="fade-up">مهارت‌ها</h2>
 
-  <!-- تعریف گرادیان رنگین‌کمونی -->
-  <svg width="0" height="0">
-    <defs>
-      <linearGradient id="rainbow-gradient" gradientTransform="rotate(90)">
-        <stop offset="0%" stop-color="#ff0000"/>
-        <stop offset="25%" stop-color="#ff9900"/>
-        <stop offset="50%" stop-color="#33cc33"/>
-        <stop offset="75%" stop-color="#3399ff"/>
-        <stop offset="100%" stop-color="#9900cc"/>
-      </linearGradient>
-    </defs>
-  </svg>
+    <section id="profile" data-aos="fade-up">
+      <h3>پروفایل رنگین‌کمانی</h3>
+      <div class="profile-ring">
+        <div class="profile-inner">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300" alt="پروفایل">
+        </div>
+      </div>
+    </section>
 
-  <div class="profile-card">
-  <!-- حلقه متحرک -->
-  <div class="profile-ring">
-    <img src="sf.jpg" data-aos="flip-left" alt="Profile">
-  </div>
+    <section id="contact" data-aos="fade-up">
+      <h3>تماس با من</h3>
+      <form id="contactForm">
+        <input type="text" name="from_name" placeholder="نام" required>
+        <input type="email" name="reply_to" placeholder="ایمیل" required>
+        <textarea name="message" placeholder="پیام" required></textarea>
+        <button type="submit" class="neon-green">ارسال ایمیل</button>
+      </form>
+    </section>
+  </main>
 
-  <!-- مهارت‌ها -->
-  <div class="skills-container">
-    <div class="skill">
-      <img src="html.png" data-aos="flip-left" alt="HTML">
-      <p data-aos="zoom-in">HTML</p>
-    </div>
-    <div class="skill">
-      <img src="css.png" data-aos="flip-left" alt="CSS">
-      <p data-aos="zoom-in">CSS</p>
-    </div>
-    <div class="skill">
-      <img src="js.png" data-aos="flip-left" alt="JavaScript">
-      <p data-aos="zoom-in">JS</p>
-    </div>
-  </div>
+  <footer>© 2025 - ساخته شده با ❤️</footer>
 
-      <form>
-        <section id="contact">
-  <h2 style="color:#28a745" data-aos="fade-up">ارتباط با من</h2>
-  <form id="contact-form">
-    <input type="text" name="user_name" placeholder="نام شما" required>
-    <input type="email" name="user_email" placeholder="ایمیل شما" required>
-    <textarea name="message" placeholder="پیام شما" required></textarea>
-    <button type="submit">ارسال</button>
-  </form>
-          <p data-aos="flip-left">
-        <a href="mailto:mhmdjwadmyrglw@gmail.com">ایمیل</a> |
-        <a href="https://github.com/animus706">گیت‌هاب</a> |
-        <a href="https://instagram.com/mhmd.jwadbyat">اینستاگرام</a>
-          </p>
-        </section>
-      </main>
-  <!-- بخش کامنت گیت‌هاب -->
-  <script src="https://giscus.app/client.js"
-    data-repo="animus706/animus706.github.io"
-    data-repo-id="R_kgD0PrZ-hQ"
-    data-category="comments"
-    data-category-id="DIC_kwD0PrZ-hc4C"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="en"
-    crossorigin="anonymous"
-    async>
-  </script>
-  <!-- لود کتابخونه‌های لازم -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<!-- اسکریپت اصلی -->
-<script src="script.js" defer></script>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
+
+
 
 
 
