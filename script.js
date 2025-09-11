@@ -70,3 +70,30 @@ if (typeof emailjs !== "undefined") {
       });
     })
     .catch(err => console.error("خطا در دریافت پروژه‌ها:", err));
+// وقتی صفحه لود شد
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("projects-container");
+
+  // گرفتن لیست پروژه‌ها از بک‌اند
+  fetch("http://localhost:5000/api/projects")  // اگه روی هاست دیگه هست آدرس رو تغییر بده
+    .then(response => response.json())
+    .then(projects => {
+      projects.forEach(project => {
+        // ساخت کارت پروژه
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        card.innerHTML = `
+          <img src="${project.image}" alt="${project.title}">
+          <h4>${project.title}</h4>
+          <p>${project.desc}</p>
+        `;
+
+        container.appendChild(card);
+      });
+    })
+    .catch(error => {
+      console.error("خطا در گرفتن پروژه‌ها:", error);
+      container.innerHTML = "<p>خطا در بارگذاری پروژه‌ها</p>";
+    });
+});
