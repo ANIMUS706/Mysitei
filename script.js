@@ -38,7 +38,7 @@ if (burger && navLinks) {
 // EmailJS
 if (typeof emailjs !== "undefined") {
   (function() {
-    emailjs.init("اینجا PUBLIC_KEY واقعی EmailJS رو بذار");
+    emailjs.init("v6w6k2XTNlTDZoMIv");
   })();
 
   const contactForm = document.getElementById("contactForm");
