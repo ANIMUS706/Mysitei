@@ -124,24 +124,24 @@ section {
   box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* سایه */
   text-align: center;         /* متن وسط */
               }
-/* رنگین‌کمونی عمومی */
-.rainbow-text, 
-body.rainbow-mode h1,
-body.rainbow-mode h2,
-body.rainbow-mode h3,
-body.rainbow-mode h4,
-body.rainbow-mode p,
-body.rainbow-mode a,
-body.rainbow-mode li,
-body.rainbow-mode label {
+/* وقتی حالت تاریک روشنه، متن‌ها رنگین‌کمونی باشن */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark p,
+body.dark a,
+body.dark li,
+body.dark label {
   background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
   -webkit-background-clip: text;
   color: transparent;
   animation: rainbowMove 3s linear infinite;
+  background-size: 400%; /* برای حرکت نرم‌تر */
 }
 
 /* انیمیشن حرکت رنگین‌کمون */
 @keyframes rainbowMove {
-  from { background-position: 0% 50%; }
-  to   { background-position: 100% 50%; }
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
