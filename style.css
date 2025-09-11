@@ -1,89 +1,85 @@
-/* ======================== General Styles ======================== */ body { margin: 0; font-family: Arial, sans-serif; background: #f4f4f4; color: #333; text-align: center; transition: background 0.3s, color 0.3s; }
+body {
+  margin: 0;
+  font-family: sans-serif;
+  transition: background 0.5s, color 0.5s;
+}
+body.light { background: #fff; color: #111; }
+body.dark { background: #111; color: #eee; }
 
-header { padding: 30px; background: #333; color: white; }
-
-header img { width: 120px; height: 120px; border-radius: 50%; }
-
-section { margin: 20px auto; padding: 20px; max-width: 800px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-
-h2 { margin-bottom: 15px; color: #222; }
-
-/* ======================== Skill Bars ======================== */ .skill { margin: 10px 0; text-align: left; }
-
-.skill-bar { height: 20px; background: #ddd; border-radius: 10px; overflow: hidden; }
-
-.skill-fill { height: 100%; background: linear-gradient(to right, #00c6ff, #0072ff); text-align: right; padding-right: 5px; color: white; font-size: 12px; line-height: 20px; }
-
-/* ======================== Forms ======================== */ form { display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 20px auto; padding: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
-
-form input, form textarea { width: 90%; padding: 12px; border: none; border-radius: 10px; outline: none; font-size: 14px; background: rgba(255, 255, 255, 0.1); color: white; }
-
-form input:focus, form textarea:focus { background: rgba(255, 255, 255, 0.2); box-shadow: 0 0 10px #00fef5; }
-
-form button { padding: 12px; border: none; border-radius: 10px; font-weight: bold; font-size: 16px; color: white; cursor: pointer; background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff); background-size: 400% 400%; animation: rainbowBtn 5s ease infinite; transition: transform 0.2s; }
-
-form button:hover { transform: scale(1.05); }
-
-@keyframes rainbowBtn { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-
-/* ======================== Navbar & Mobile Menu ======================== */ .navbar ul { list-style: none; display: flex; gap: 20px; justify-content: center; padding: 0; margin: 0; }
-
-.navbar a { text-decoration: none; font-weight: bold; color: inherit; transition: 0.3s; }
-
-.navbar a:hover { color: #ff00cc; }
-
-#menu-toggle { display: none; font-size: 24px; background: none; border: none; cursor: pointer; margin-left: 10px; }
-
-@media (max-width: 768px) { .navbar ul { display: none; flex-direction: column; background: #111; position: absolute; top: 60px; right: 10px; padding: 10px; border-radius: 10px; } .navbar ul.show { display: flex; } #menu-toggle { display: block; } }
-
-/* ======================== Circle Skills (SVG) ======================== */ .circle-skill { position: relative; width: 120px; height: 120px; }
-
-.circle-skill svg { position: relative; width: 120px; height: 120px; transform: rotate(-90deg); }
-
-.circle-skill circle:first-child { stroke: #333; }
-
-.circle-skill circle:last-child { stroke: url(#rainbow-gradient); stroke-dasharray: 314; }
-
-.circle-skill .percent { position: absolute; font-size: 22px; font-weight: bold; color: white; width: 100%; text-align: center; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-
-svg defs linearGradient { animation: rainbowMove 4s linear infinite; }
-
-@keyframes rainbowMove { 0% { stroke: url(#rainbowGradient); } 100% { stroke: url(#rainbowGradient); } }
-
-/* ======================== Profile Card + Ring ======================== */ .profile-card { display: flex; flex-direction: column;
-/* کارت پروفایل */
-.profile-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+/* Loader */
+.loader-screen {
+  position: fixed; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  color: #fff;
 }
 
-/* حلقه دور عکس پروفایل */
+/* Rainbow profile ring */
 .profile-ring {
-  width: 170px;
-  height: 170px;
   border-radius: 50%;
-  background: conic-gradient(#00bfff, #ff00ff, #ff4500, #32cd32);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: spin 2s linear infinite; /* چرخش حلقه */
-  padding: 5px; /* فاصله بین حلقه و عکس */
+  padding: 6px;
+  background: conic-gradient(red, orange, yellow, green, blue, purple, red);
+  animation: spin 6s linear infinite;
+  display: inline-block;
 }
-
-/* عکس داخل حلقه */
-.profile-ring img {
-  width: 150px;
-  height: 150px;
+.profile-inner {
   border-radius: 50%;
+  background: inherit;
+  padding: 6px;
+  background: #fff;
+}
+.profile-inner img, .circle {
+  border-radius: 50%;
+  display: block;
+  width: 100px; height: 100px;
   object-fit: cover;
-  border: 4px solid #fff; /* خط سفید دور عکس */
+}
+.circle { background: purple; animation: pulse 1.5s infinite; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity: .7; }
+  50% { transform: scale(1.1); opacity: 1; }
 }
 
-/* انیمیشن چرخش */
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+/* Navbar */
+header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.6);
+  position: sticky; top: 0;
 }
+nav ul { display: flex; gap: 20px; list-style: none; }
+nav a { text-decoration: none; color: inherit; }
+.burger { display: none; background: none; border: none; cursor: pointer; }
+.burger span { display: block; width: 25px; height: 3px; margin: 5px; background: currentColor; }
+
+@media (max-width: 768px) {
+  nav ul { display: none; flex-direction: column; }
+  nav ul.open { display: flex; }
+  .burger { display: block; }
+}
+
+/* Neon green button */
+.neon-green {
+  background: linear-gradient(90deg,#00ff85,#2ee6a7);
+  border: none; color: #042;
+  padding: 10px 20px; border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0,255,133,0.6);
+  cursor: pointer;
+}
+
+/* Rainbow words when toggling */
+.rainbow-word {
+  background: linear-gradient(90deg,red,orange,yellow,green,blue,indigo,violet);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: hueShift 2s linear;
+}
+@keyframes hueShift {
+  from { filter: hue-rotate(0); }
+  to { filter: hue-rotate(360deg); }
+              }
 
