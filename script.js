@@ -42,9 +42,5 @@ toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   document.body.classList.toggle("light");
 
-  // فعال کردن مود رنگین‌کمونی
-  document.body.classList.add("rainbow-mode");
-  setTimeout(() => document.body.classList.remove("rainbow-mode"), 3000);
-
   toggleBtn.textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
 });
