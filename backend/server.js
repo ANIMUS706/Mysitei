@@ -22,5 +22,5 @@ app.get("/api/projects", (req, res) => {
 
 // اجرا
 app.listen(PORT, () => {
-  console.log(Server is running on port ${PORT});
+console.log(Server is running on port ${PORT});
 });
