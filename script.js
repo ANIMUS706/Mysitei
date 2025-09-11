@@ -45,7 +45,7 @@ if (typeof emailjs !== "undefined") {
   if (contactForm) {
     contactForm.addEventListener("submit", function(e) {
       e.preventDefault();
-      emailjs.sendForm("SERVICE_ID", "TEMPLATE_ID", this)
+      emailjs.sendForm("service_gmail01", "template_0a98zf8", this)
         .then(() => alert("ایمیل ارسال شد!"))
         .catch(err => alert("خطا در ارسال: " + JSON.stringify(err)));
     });
