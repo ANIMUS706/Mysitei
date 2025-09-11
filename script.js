@@ -51,3 +51,22 @@ if (typeof emailjs !== "undefined") {
     });
   }
 }
+  // دریافت داده‌ها از سرور
+  fetch("http://localhost:5000/api/projects")
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById("project-list");
+
+      data.forEach(project => {
+        const div = document.createElement("div");
+        div.classList.add("project-card");
+
+        div.innerHTML = `
+          <h3>${project.title}</h3>
+          <p>${project.desc}</p>
+        `;
+
+        container.appendChild(div);
+      });
+    })
+    .catch(err => console.error("خطا در دریافت پروژه‌ها:", err));
