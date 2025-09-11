@@ -86,7 +86,6 @@ document.querySelectorAll(".circle-skill").forEach(circleSkill => {
   circle.style.transition = "stroke-dashoffset 2s ease";
   circle.style.strokeDashoffset = offset;
 });
-src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
   (function(){
     emailjs.init("v6w6k2XTNlTDZoMIv"); // اینجا Public Key خودتو بذار
   })();
@@ -105,10 +104,9 @@ AOS.init({
   duration: 1200, // سرعت انیمیشن (میلی‌ثانیه)
   once: true,     // فقط یکبار انیمیشن اجرا بشه
 });
-alert("صفحه داره لود میشه...");
 window.addEventListener("load", () => {
-  const loader = document.getElementById("loading"); // اینجا اسم درست
+  const loader = document.getElementById("loading");
   if (loader) {
-    loader.style.display = "none"; // بدون setTimeout
+    loader.style.display = "none";
   }
 });
