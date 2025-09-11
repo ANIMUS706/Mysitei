@@ -105,7 +105,10 @@ AOS.init({
   duration: 1200, // سرعت انیمیشن (میلی‌ثانیه)
   once: true,     // فقط یکبار انیمیشن اجرا بشه
 });
+alert("صفحه داره لود میشه...");
 window.addEventListener("load", () => {
   const loader = document.getElementById("loading");
-  loader.style.display = "none"; 
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 3000); // 3 ثانیه لودینگ بمونه
 });
