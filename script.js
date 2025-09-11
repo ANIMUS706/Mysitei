@@ -100,13 +100,16 @@ document.querySelectorAll(".circle-skill").forEach(circleSkill => {
         alert("خطا در ارسال ❌", error);
       });
   });
-AOS.init({
-  duration: 1200, // سرعت انیمیشن (میلی‌ثانیه)
-  once: true,     // فقط یکبار انیمیشن اجرا بشه
-});
 window.addEventListener("load", () => {
   const loader = document.getElementById("loading");
   if (loader) {
     loader.style.display = "none";
   }
+});
+// فعال‌سازی انیمیشن‌ها
+document.addEventListener("DOMContentLoaded", function () {
+  AOS.init({
+    duration: 1200, // سرعت انیمیشن (میلی‌ثانیه)
+    once: true      // فقط یکبار انیمیشن اجرا بشه
+  });
 });
