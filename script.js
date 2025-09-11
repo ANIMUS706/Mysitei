@@ -50,35 +50,18 @@ if (typeof emailjs !== "undefined") {
         .catch(err => alert("خطا در ارسال: " + JSON.stringify(err)));
     });
   }
-}
-  // دریافت داده‌ها از سرور
-  fetch("http://localhost:5000/api/projects")
-    .then(res => res.json())
-    .then(data => {
-      const container = document.getElementById("project-list");
-
-      data.forEach(project => {
-        const div = document.createElement("div");
-        div.classList.add("project-card");
-
-        div.innerHTML = `
-          <h3>${project.title}</h3>
-          <p>${project.desc}</p>
-        `;
-
-        container.appendChild(div);
-      });
-    })
     .catch(err => console.error("خطا در دریافت پروژه‌ها:", err));
 // وقتی صفحه لود شد
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("projects-container");
 
   // گرفتن لیست پروژه‌ها از بک‌اند
-  fetch("http://localhost:5000/api/projects")  // اگه روی هاست دیگه هست آدرس رو تغییر بده
-    .then(response => response.json())
-    .then(projects => {
-      projects.forEach(project => {
+  fetch("https://animus706-github-io-3.onrender.com/api/projects")
+  .then(res => res.json())
+  .then(data => {
+    console.log(data); // اینجا می‌تونی داده‌ها رو توی صفحه نشون بدی
+  })
+  .catch(err => console.error(err));
         // ساخت کارت پروژه
         const card = document.createElement("div");
         card.classList.add("card");
