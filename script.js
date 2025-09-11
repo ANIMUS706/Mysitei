@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   if (loader) loader.style.display = "none";
 });
 
-// AOS init (اول مطمئن شو فایل aos.js رو قبل از این اضافه کردی)
+// AOS init
 if (typeof AOS !== "undefined") {
   AOS.init({ duration: 700, once: true });
 }
@@ -50,7 +50,9 @@ if (typeof emailjs !== "undefined") {
         .catch(err => alert("خطا در ارسال: " + JSON.stringify(err)));
     });
   }
-    // وقتی صفحه لود شد
+}
+
+// وقتی صفحه لود شد
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("projects-container");
 
