@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="fa">
   <head>
+    <!-- داخل head -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -53,38 +56,38 @@
                                              </header>
   <main>
     <section id="home">
-      <h2 data-translate="home" style="color:#28a745">خانه</h2>
-      <p>!به سایت من خوش اومدی</p>
+      <h2 data-translate="home" style="color:#28a745" data-aos="fade-up">خانه</h2>
+      <p data-aos="zoom-in">!به سایت من خوش اومدی</p>
     </section>
       <section id="about">
-      <h2 data-translate="about" style="color:#28a745">درباره من</h2>
+      <h2 data-translate="about" style="color:#28a745" data-aos="fade-up">درباره من</h2>
   <div class="profile-card">
     <div class="profile-ring">
-    <img src="Jio.jpeg" alt="عکس پروفایل من">
+    <img src="Jio.jpeg" data-aos="flip-left" alt="عکس پروفایل من">
     </div>
-    <p>سلام! من جواد هستم، ۱۶ ساله و توسعه‌دهنده وب...</p>
+    <p data-aos="zoom-in">سلام! من جواد هستم،توسعه‌دهنده وب...</p>
   </div>
       </section>
 
     <section>
-      <h2 data-translate="projects" style="color:#28a745">پروژه‌ها</h2>
+      <h2 data-translate="projects" style="color:#28a745" data-aos="fade-up">پروژه‌ها</h2>
       <div>
-        <h3 data-translate="project1Title">پروژه HTML و CSS</h3>
-        <p data-translate="project1Desc">یک وبسایت نمونه با HTML و CSS</p>
+        <h3 data-translate="project1Title" data-aos="fade-up">پروژه HTML و CSS</h3>
+        <p data-translate="project1Desc" data-aos="zoom-in">یک وبسایت نمونه با HTML و CSS</p>
         <a href="#" data-translate="project1Link">مشاهده</a>
       </div>
       <div>
-        <h3 data-translate="project2Title">پروژه جاوااسکریپت</h3>
-        <p data-translate="project2Desc">نمونه پروژه جاوااسکریپت</p>
+        <h3 data-translate="project2Title" data-aos="fade-up">پروژه جاوااسکریپت</h3>
+        <p data-translate="project2Desc" data-aos="zoom-in">نمونه پروژه جاوااسکریپت</p>
         <a href="#" data-translate="project2Link">مشاهده</a>
       </div>
     </section>
 
     <section id="blog">
-      <h2 data-translate="blog" style="color:#28a745">مقالات</h2>
+      <h2 data-translate="blog" style="color:#28a745" data-aos="fade-up">مقالات</h2>
       <article>
-        <h3 data-translate="blogPost1Title">اولین مقاله من</h3>
-        <p data-translate="blogPost1Desc">این یک توضیح نمونه برای مقاله من است</p>
+        <h3 data-translate="blogPost1Title" data-aos="zoom-in">اولین مقاله من</h3>
+        <p data-translate="blogPost1Desc" data-aos="zoom-in">این یک توضیح نمونه برای مقاله من است</p>
       </article>
     </section>
     <svg width="0" height="0">
@@ -100,7 +103,7 @@
   </defs>
     </svg>
     <section id="skills">
-  <h2 data-translate="Skills>مهارت‌ها</h2>
+  <h2 data-translate="Skills" data-aos="fade-up">مهارت‌ها</h2>
 
   <!-- تعریف گرادیان رنگین‌کمونی -->
   <svg width="0" height="0">
@@ -118,35 +121,35 @@
   <div class="profile-card">
   <!-- حلقه متحرک -->
   <div class="profile-ring">
-    <img src="sf.jpg" alt="Profile">
+    <img src="sf.jpg" data-aos="flip-left" alt="Profile">
   </div>
 
   <!-- مهارت‌ها -->
   <div class="skills-container">
     <div class="skill">
-      <img src="html.png" alt="HTML">
-      <p>HTML</p>
+      <img src="html.png" data-aos="flip-left" alt="HTML">
+      <p data-aos="zoom-in">HTML</p>
     </div>
     <div class="skill">
-      <img src="css.png" alt="CSS">
-      <p>CSS</p>
+      <img src="css.png" data-aos="flip-left" alt="CSS">
+      <p data-aos="zoom-in">CSS</p>
     </div>
     <div class="skill">
-      <img src="js.png" alt="JavaScript">
-      <p>JS</p>
+      <img src="js.png" data-aos="flip-left" alt="JavaScript">
+      <p data-aos="zoom-in">JS</p>
     </div>
   </div>
 
       <form>
         <section id="contact">
-  <h2 style="color:#28a745">ارتباط با من</h2>
+  <h2 style="color:#28a745" data-aos="fade-up">ارتباط با من</h2>
   <form id="contact-form">
     <input type="text" name="user_name" placeholder="نام شما" required>
     <input type="email" name="user_email" placeholder="ایمیل شما" required>
     <textarea name="message" placeholder="پیام شما" required></textarea>
     <button type="submit">ارسال</button>
   </form>
-          <p>
+          <p data-aos="flip-left">
         <a href="mailto:mhmdjwadmyrglw@gmail.com">ایمیل</a> |
         <a href="https://github.com/animus706">گیت‌هاب</a> |
         <a href="https://instagram.com/mhmd.jwadbyat">اینستاگرام</a>
@@ -170,10 +173,17 @@
     async>
   </script>
 
+<!-- قبل از بسته شدن body -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
   <!-- اسکریپت اصلی -->
   <script src="script.js" defer></script>
 </body>
 </html>
+
 
 
 
