@@ -86,3 +86,18 @@ document.querySelectorAll(".circle-skill").forEach(circleSkill => {
   circle.style.transition = "stroke-dashoffset 2s ease";
   circle.style.strokeDashoffset = offset;
 });
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  (function(){
+    emailjs.init("v6w6k2XTNlTDZoMIv"); // اینجا Public Key خودتو بذار
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_gmail01', 'template_0a98zf8', this)
+      .then(() => {
+        alert("پیام شما با موفقیت ارسال شد ✅");
+      }, (error) => {
+        alert("خطا در ارسال ❌", error);
+      });
+  });
