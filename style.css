@@ -112,17 +112,7 @@ body, h1, h2, h3, h4, p {
   transition: transform 0.3s;
   text-align: center; /* محتوا داخل کارت هم وسط */
 }
-/* کادر برای هر سکشن */
-section {
-  margin: 40px auto;          /* فاصله از بالا/پایین */
-  padding: 30px 20px;         /* فاصله داخلی */
-  max-width: 800px;           /* عرض ثابت و وسط */
-  background: #000;           /* پس‌زمینه مشکی */
-  color: #fff;                /* متن سفید */
-  border-radius: 16px;        /* گوشه‌های گرد */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* سایه */
-  text-align: center;         /* متن وسط */
-              }
+
 /* وقتی حالت تاریک روشنه، متن‌ها رنگین‌کمونی باشن */
 body.dark h1,
 body.dark h2,
@@ -180,4 +170,55 @@ body.dark label {
   object-fit: cover; /* عکس رو داخل قاب فیت می‌کنه */
   border-radius: 12px;
   margin-bottom: 10px;
+}
+section {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 90%;
+  border-radius: 20px;
+  background: #111; /* بک‌گراند تاریک */
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.6), /* سایه بیرونی */
+    inset 0 0 20px rgba(255,255,255,0.05); /* سایه داخلی */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* افکت هاور */
+section:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.8),
+    inset 0 0 25px rgba(255,255,255,0.1);
+}
+
+/* هاله رنگین‌کمانی */
+section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    red, orange, yellow, lime, cyan, blue, violet, red
+  );
+  animation: rotate 6s linear infinite;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+/* برای اینکه متن بالای هاله باشه */
+section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* انیمیشن چرخش گرادیان */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
