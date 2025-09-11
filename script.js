@@ -107,8 +107,8 @@ AOS.init({
 });
 alert("صفحه داره لود میشه...");
 window.addEventListener("load", () => {
-  const loader = document.getElementById("loading");
-  setTimeout(() => {
-    loader.style.display = "none";
-  }, 3000); // 3 ثانیه لودینگ بمونه
+  const loader = document.getElementById("loading"); // اینجا اسم درست
+  if (loader) {
+    loader.style.display = "none"; // بدون setTimeout
+  }
 });
