@@ -50,19 +50,18 @@ if (typeof emailjs !== "undefined") {
         .catch(err => alert("خطا در ارسال: " + JSON.stringify(err)));
     });
   }
-    .catch(err => console.error("خطا در دریافت پروژه‌ها:", err));
-// وقتی صفحه لود شد
+    // وقتی صفحه لود شد
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("projects-container");
 
   // گرفتن لیست پروژه‌ها از بک‌اند
   fetch("https://animus706-github-io-3.onrender.com/api/projects")
-  .then(res => res.json())
-  .then(data => {
-    console.log(data); // اینجا می‌تونی داده‌ها رو توی صفحه نشون بدی
-  })
-  .catch(err => console.error(err));
-        // ساخت کارت پروژه
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+
+      // ساخت کارت برای هر پروژه
+      data.forEach(project => {
         const card = document.createElement("div");
         card.classList.add("card");
 
