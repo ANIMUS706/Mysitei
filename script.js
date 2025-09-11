@@ -86,7 +86,7 @@ document.querySelectorAll(".circle-skill").forEach(circleSkill => {
   circle.style.transition = "stroke-dashoffset 2s ease";
   circle.style.strokeDashoffset = offset;
 });
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
   (function(){
     emailjs.init("v6w6k2XTNlTDZoMIv"); // اینجا Public Key خودتو بذار
   })();
