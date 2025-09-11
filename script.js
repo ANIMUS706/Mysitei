@@ -101,3 +101,7 @@ src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
         alert("خطا در ارسال ❌", error);
       });
   });
+AOS.init({
+  duration: 1200, // سرعت انیمیشن (میلی‌ثانیه)
+  once: true,     // فقط یکبار انیمیشن اجرا بشه
+});
