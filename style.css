@@ -1,470 +1,78 @@
-body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      text-align: center;
-    }
-    header {
-      padding: 30px;
-      background: #333;
-      color: white;
-    }
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-    }
-    section {
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 800px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      margin-bottom: 15px;
-      color: #222;
-    }
-    .project, .blog-post, .comment {
-      background: #eee;
-      margin: 10px;
-      padding: 15px;
-      border-radius: 8px;
-    }
-    .skill {
-      margin: 10px 0;
-      text-align: left;
-    }
-    .skill-bar {
-      height: 20px;
-      background: #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .skill-fill {
-      height: 100%;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      text-align: right;
-      padding-right: 5px;
-      color: white;
-      font-size: 12px;
-      line-height: 20px;
-    }
-    form input, form textarea {
-      width: 90%;
-      padding: 10px;
-      margin: 8px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    form button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      color: white;
-      cursor: pointer;
-    }
-/* دکمه تغییر تم گیمینگ */
-#theme-toggle {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(45deg, #ff0057, #ff7b00, #00ffea, #7000ff);
-  background-size: 300% 300%;
-  box-shadow: 0 0 15px rgba(255, 0, 87, 0.7), 
-              0 0 25px rgba(0, 255, 234, 0.6);
-  animation: neon-glow 3s linear infinite;
-  transition: transform 0.2s ease;
-}
+/* ======================== General Styles ======================== */ body { margin: 0; font-family: Arial, sans-serif; background: #f4f4f4; color: #333; text-align: center; transition: background 0.3s, color 0.3s; }
 
-#theme-toggle:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px rgba(255, 0, 87, 1), 
-              0 0 35px rgba(0, 255, 234, 1);
-}
+header { padding: 30px; background: #333; color: white; }
 
-@keyframes neon-glow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+header img { width: 120px; height: 120px; border-radius: 50%; }
 
-/* حالت روشن */
-body {
-  background: #ffffff;
-  color: #000000;
-  transition: background 0.3s, color 0.3s;
-}
+section { margin: 20px auto; padding: 20px; max-width: 800px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
 
-/* حالت تاریک */
-body.dark-mode {
-  background: #111111;
-  color: #ffffff;
-}
-/* متن‌ها و لینک‌ها */
-a, h1, h2, h3, h4, h5, h6, p {
-  transition: color 0.3s;
-}
+h2 { margin-bottom: 15px; color: #222; }
 
-body.dark-mode a,
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6,
-body.dark-mode p {
-  color: #ffffff;
-}
-/* لینک‌ها در حالت روشن */
-a {
-  color: #0077ff;
-  text-decoration: none;
-  transition: color 0.3s, text-shadow 0.3s;
-}
+/* ======================== Skill Bars ======================== */ .skill { margin: 10px 0; text-align: left; }
 
-a:hover {
-  color: #0055aa;
-  text-shadow: 0 0 8px rgba(0, 119, 255, 0.6);
-}
+.skill-bar { height: 20px; background: #ddd; border-radius: 10px; overflow: hidden; }
 
-/* لینک‌ها در حالت تاریک */
-body.dark-mode a {
-  color: #00ffcc;
-  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
-}
+.skill-fill { height: 100%; background: linear-gradient(to right, #00c6ff, #0072ff); text-align: right; padding-right: 5px; color: white; font-size: 12px; line-height: 20px; }
 
-body.dark-mode a:hover {
-  color: #00ffaa;
-  text-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa, 0 0 30px #00ffaa;
-}
-button, .btn {
-  background: #0077ff;
-  color: #fff;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s, box-shadow 0.3s;
-}
+/* ======================== Forms ======================== */ form { display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 20px auto; padding: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
 
-button:hover, .btn:hover {
-  background: #0055aa;
-  box-shadow: 0 0 12px rgba(0, 119, 255, 0.8);
-}
+form input, form textarea { width: 90%; padding: 12px; border: none; border-radius: 10px; outline: none; font-size: 14px; background: rgba(255, 255, 255, 0.1); color: white; }
 
-/* حالت تاریک */
-body.dark-mode button, 
-body.dark-mode .btn {
-  background: #00ffcc;
-  color: #111;
-  box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
-}
+form input:focus, form textarea:focus { background: rgba(255, 255, 255, 0.2); box-shadow: 0 0 10px #00fef5; }
 
-body.dark-mode button:hover, 
-body.dark-mode .btn:hover {
-  background: #00ffaa;
-  box-shadow: 0 0 15px #00ffaa, 0 0 30px #00ffaa, 0 0 50px #00ffaa;
-}
-/* متن‌ها در حالت روشن */
-.card {
-  background: #f5f5f5; /* پس‌زمینه روشن */
-}
-.card h3, .card p {
-  color: #111; /* متن تیره */
-}
+form button { padding: 12px; border: none; border-radius: 10px; font-weight: bold; font-size: 16px; color: white; cursor: pointer; background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff); background-size: 400% 400%; animation: rainbowBtn 5s ease infinite; transition: transform 0.2s; }
 
- body.dark-mode .card {
-  background: #111; /* پس‌زمینه مشکی برای کل کارت */
-  color: #e0e0e0;  /* رنگ پیش‌فرض متن */
-  color: #66ccff; /* آبی یخی */
-}
+form button:hover { transform: scale(1.05); }
 
-/* لینک‌ها */
-body.dark-mode .card a {
-  color: #00ffcc; /* سبز نئونی */
-  text-decoration: none;
-  font-weight: bold;
-}
-/* کارت‌ها در حالت روشن */
-.card {
-  background: #f5f5f5; /* روشن */
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  transition: 0.3s;
-}
+@keyframes rainbowBtn { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
-/* کارت‌ها در حالت تاریک */
-body.dark-mode .card {
-  background: #111;    /* مشکی */
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
-}
-#blog .card {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-/* رنگین‌کمونی برای کل متن‌ها در حالت تاریک */
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode h3,
-.dark-mode h4,
-.dark-mode h5,
-.dark-mode h6,
-.dark-mode p,
-.dark-mode a,
-.dark-mode span,
-.dark-mode li {
-  background: linear-gradient(
-    270deg, 
-    #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff
-  );
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;   /* 👈 این خطو اضافه کن تا متن کاملا شفاف بشه */
-  animation: rainbow 3s ease infinite;
-}
+/* ======================== Navbar & Mobile Menu ======================== */ .navbar ul { list-style: none; display: flex; gap: 20px; justify-content: center; padding: 0; margin: 0; }
 
-@keyframes rainbow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-/* استایل کلی فرم */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 20px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
+.navbar a { text-decoration: none; font-weight: bold; color: inherit; transition: 0.3s; }
 
-/* استایل ورودی‌ها */
-form input,
-form textarea {
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  font-size: 14px;
-  background: rgba(255,255,255,0.1);
-  color: white;
-  resize: none;
-  transition: 0.3s;
-}
+.navbar a:hover { color: #ff00cc; }
 
-/* تغییر رنگ ورودی موقع فوکوس */
-form input:focus,
-form textarea:focus {
-  background: rgba(255,255,255,0.2);
-  box-shadow: 0 0 10px #00ffe5;
-}
+#menu-toggle { display: none; font-size: 24px; background: none; border: none; cursor: pointer; margin-left: 10px; }
 
-/* دکمه ارسال رنگین‌کمونی */
-form button {
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-  background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
-  background-size: 400% 400%;
-  animation: rainbowBtn 5s ease infinite;
-  transition: transform 0.2s;
-}
+@media (max-width: 768px) { .navbar ul { display: none; flex-direction: column; background: #111; position: absolute; top: 60px; right: 10px; padding: 10px; border-radius: 10px; } .navbar ul.show { display: flex; } #menu-toggle { display: block; } }
 
-/* افکت کلیک */
-form button:hover {
-  transform: scale(1.05);
-}
+/* ======================== Circle Skills (SVG) ======================== */ .circle-skill { position: relative; width: 120px; height: 120px; }
 
-/* انیمیشن رنگین‌کمونی */
-@keyframes rainbowBtn {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-/* حالت پیشفرض (دسکتاپ) */
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-}
+.circle-skill svg { position: relative; width: 120px; height: 120px; transform: rotate(-90deg); }
 
-.navbar a {
-  text-decoration: none;
-  font-weight: bold;
-  color: inherit;
-  transition: 0.3s;
-}
+.circle-skill circle:first-child { stroke: #333; }
 
-.navbar a:hover {
-  color: #ff00cc;
-}
+.circle-skill circle:last-child { stroke: url(#rainbow-gradient); stroke-dasharray: 314; }
 
-/* دکمه منو همبرگری */
-#menu-toggle {
-  display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-left: 10px;
-}
+.circle-skill .percent { position: absolute; font-size: 22px; font-weight: bold; color: white; width: 100%; text-align: center; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
-/* حالت موبایل */
-@media (max-width: 768px) {
-  .navbar ul {
-    display: none;
-    flex-direction: column;
-    background: #111;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    padding: 10px;
-    border-radius: 10px;
-  }
+svg defs linearGradient { animation: rainbowMove 4s linear infinite; }
 
-  .navbar ul.show {
-    display: flex;
-  }
+@keyframes rainbowMove { 0% { stroke: url(#rainbowGradient); } 100% { stroke: url(#rainbowGradient); } }
 
-  #menu-toggle {
-    display: block;
-  }
-      }
-
-/* متن درصد */
-.circle-skill .percent {
-  position: absolute;
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  z-index: 2;
-}
-
-/* اسم مهارت */
-.circle-skill p {
-  margin-top: 10px;
-  font-size: 18px;
-  text-align: center;
-}
-
-/* گرادینت رنگین‌کمونی */
-svg defs linearGradient {
-  animation: rainbowMove 4s linear infinite;
-}
-
-@keyframes rainbowMove {
-  0% { stroke: url(#rainbowGradient); }
-  100% { stroke: url(#rainbowGradient); }
-}
-
-.circle-skill circle:nth-child(1) {
-  stroke: #ddd; /* پس‌زمینه خاکستری */
-}
-
-/* ================= بخش مهارت‌ها (دایره‌ای رنگین‌کمونی) ================= */
-.skills-container {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.circle-skill {
-  position: relative;
-  width: 120px;
-  height: 120px;
-}
-
-.circle-skill svg {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  transform: rotate(-90deg);
-}
-
-.circle-skill circle:first-child {
-  stroke: #333; /* دایره پس‌زمینه */
-}
-
-.circle-skill circle:last-child {
-  stroke: url(#rainbow-gradient); /* رنگین‌کمونی */
-  stroke-dasharray: 314; /* محیط دایره */
-  stroke-dashoffset: 314; /* شروع پر شدن */
-  animation: progressAnim 2s ease forwards;
-}
-
-@keyframes progressAnim {
-  to {
-    stroke-dashoffset: var(--dashoffset);
-  }
-}
-.circle-skill circle {
-  fill: transparent !important; /* داخل دایره خالی */
-}
-section, .card, .content, .box {
-  background: #000 !important; /* پس‌زمینه سیاه */
-  color: #fff !important;      /* متن سفید */
-  border-radius: 12px;
-  padding: 20px;
-body.light-mode section,
-body.light-mode .card,
-body.light-mode .content,
-body.light-mode .box {
-  background: #fff !important;
-  color: #111 !important;
-}
-      body.light-mode section h2 {
-  color: #000 !important;
-}
-      .profile-card {
+/* ======================== Profile Card + Ring ======================== */ .profile-card { display: flex; flex-direction: column;
+/* کارت پروفایل */
+.profile-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
 
+/* حلقه دور عکس پروفایل */
 .profile-ring {
   width: 170px;
   height: 170px;
   border-radius: 50%;
-  background: conic-gradient(#00bfff, #ff00ff, #00ff88, #00bfff); /* رنگ‌های حلقه */
+  background: conic-gradient(#00bfff, #ff00ff, #ff4500, #32cd32);
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: spin 2s linear infinite; /* انیمیشن چرخش */
+  animation: spin 2s linear infinite; /* چرخش حلقه */
   padding: 5px; /* فاصله بین حلقه و عکس */
 }
 
+/* عکس داخل حلقه */
 .profile-ring img {
   width: 150px;
   height: 150px;
@@ -473,36 +81,9 @@ body.light-mode .box {
   border: 4px solid #fff; /* خط سفید دور عکس */
 }
 
+/* انیمیشن چرخش */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-      .skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
 
-.skill {
-  display: flex;
-  flex-direction: column; /* متن بیاد زیر عکس */
-  align-items: center;
-  text-align: center;
-}
-
-.skill img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 2px solid lime;
-  padding: 10px;
-  object-fit: cover;
-}
-
-.skill p {
-  margin-top: 10px;
-  color: #00ff99;
-  font-size: 18px;
-  font-weight: bold;
-}
