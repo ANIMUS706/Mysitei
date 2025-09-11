@@ -82,4 +82,66 @@ nav a { text-decoration: none; color: inherit; }
   from { filter: hue-rotate(0); }
   to { filter: hue-rotate(360deg); }
               }
+/* همه متن‌ها وسط */
+body, h1, h2, h3, h4, p {
+  text-align: center;
+}
 
+/* پروژه‌ها */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* وسط افقی */
+  gap: 20px;
+}
+
+/* مهارت‌ها */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* وسط افقی */
+  align-items: center;     /* وسط عمودی */
+  gap: 30px;
+}
+
+/* کارت پروژه‌ها وسط با افکت */
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+  text-align: center; /* محتوا داخل کارت هم وسط */
+}
+/* کادر برای هر سکشن */
+section {
+  margin: 40px auto;          /* فاصله از بالا/پایین */
+  padding: 30px 20px;         /* فاصله داخلی */
+  max-width: 800px;           /* عرض ثابت و وسط */
+  background: #000;           /* پس‌زمینه مشکی */
+  color: #fff;                /* متن سفید */
+  border-radius: 16px;        /* گوشه‌های گرد */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* سایه */
+  text-align: center;         /* متن وسط */
+              }
+/* رنگین‌کمونی عمومی */
+.rainbow-text, 
+body.rainbow-mode h1,
+body.rainbow-mode h2,
+body.rainbow-mode h3,
+body.rainbow-mode h4,
+body.rainbow-mode p,
+body.rainbow-mode a,
+body.rainbow-mode li,
+body.rainbow-mode label {
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rainbowMove 3s linear infinite;
+}
+
+/* انیمیشن حرکت رنگین‌کمون */
+@keyframes rainbowMove {
+  from { background-position: 0% 50%; }
+  to   { background-position: 100% 50%; }
+}
