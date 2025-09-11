@@ -36,3 +36,15 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     .then(() => alert("ایمیل ارسال شد!"))
     .catch(err => alert("خطا در ارسال: " + JSON.stringify(err)));
 });
+// Dark/Light toggle
+const toggleBtn = document.getElementById("themeToggle");
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  document.body.classList.toggle("light");
+
+  // فعال کردن مود رنگین‌کمونی
+  document.body.classList.add("rainbow-mode");
+  setTimeout(() => document.body.classList.remove("rainbow-mode"), 3000);
+
+  toggleBtn.textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
+});
