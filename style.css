@@ -174,3 +174,10 @@ body.dark label {
   margin-top: 10px;
   font-weight: bold;
 }
+.card img {
+  width: 100%;
+  height: 160px; /* می‌تونی تغییر بدی */
+  object-fit: cover; /* عکس رو داخل قاب فیت می‌کنه */
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
